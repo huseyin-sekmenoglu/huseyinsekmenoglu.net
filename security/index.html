@@ -1,0 +1,184 @@
+<!-- _______. _______  __  ___ .___  ___.  _______ .__   __.     _______   ___________    ____
+    /       ||   ____||  |/  / |   \/   | |   ____||  \ |  |    |       \ |   ____\   \  /   /
+   |   (----`|  |__   |  '  /  |  \  /  | |  |__   |   \|  |    |  .--.  ||  |__   \   \/   /
+    \   \    |   __|  |    <   |  |\/|  | |   __|  |  . `  |    |  |  |  ||   __|   \      /
+.----)   |   |  |____ |  .  \  |  |  |  | |  |____ |  |\   |  __|  '--'  ||  |____   \    /
+|_______/    |_______||__|\__\ |__|  |__| |_______||__| \__| (__)_______/ |_______|   \__/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>Security Development Roadmap | Tech Journey</title>
+<meta name="Description" content="Learn to secure your applications from the ground up &#x2014; from common web vulnerabilities to cloud-native and DevSecOps strategies." />
+<meta name="Name" content="Security Development Roadmap" />
+<meta name="robots" content="FOLLOW,INDEX" />
+<link rel="canonical" href="http://127.0.0.1:44362/security" />
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://127.0.0.1:44362/security" />
+<meta property="og:title" content="Security Development Roadmap" />
+<meta property="og:description" content="Learn to secure your applications from the ground up &#x2014; from common web vulnerabilities to cloud-native and DevSecOps strategies." />
+<meta property="og:image" content="http://127.0.0.1:44362/socialimage.png">
+<meta property="og:image:type" content="image/png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Security Development Roadmap">
+<meta name="twitter:description" content="Learn to secure your applications from the ground up &#x2014; from common web vulnerabilities to cloud-native and DevSecOps strategies.">
+<meta name="twitter:image" content="http://127.0.0.1:44362/socialimage.png">
+
+<link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="./apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="manifest" href="./manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- Font Awesome icons (free version)-->
+    <script defer src="https://use.fontawesome.com/releases/v6.5.1/js/all.js" crossorigin="anonymous" integrity="sha384-3ve3u7etWcm2heCe4TswfZSAYSg2jR/EJxRHuKM5foOiKS8IJL/xRlvmjCaHELBz"></script>
+    <!-- Google fonts-->
+    <link rel="stylesheet preconnect" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&display=swap">
+    <link rel="stylesheet preconnect" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&display=swap">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="./assets/css/styles.css?v=Qp1WwV4Sh8tCn8xci8BqGgNrNdoCGZj65TaRkaCwOIQ" rel="stylesheet" />
+    <link href="./assets/css/vs2015.css?v=y1WwMbFu6-hafrVtvYUA6Ilysb21U-IAgbStKctfnYw" rel="stylesheet" />
+    <link href="./assets/css/highlightjs-copy.min.css?v=ECXrYKedRuhNap_Y_RM-JJksiFhOOoj_qefmcuEElIw" rel="stylesheet" />
+    <link href="./assets/css/swiffy-slider.min.css?v=bA4I6ewBzTSiwrAJh61J0WZTA5P-yY-Je2qKlNLwDyY" rel="stylesheet" />
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="./">
+            Tech Journey
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 py-3 py-lg-4" href="./backend">
+                            Backend
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 py-3 py-lg-4" href="./frontend">
+                            Frontend
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 py-3 py-lg-4" href="./devops">
+                            Devops
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 py-3 py-lg-4" href="./security">
+                            Security
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 py-3 py-lg-4" href="./mobile">
+                            Mobile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 py-3 py-lg-4" href="./interview-prep">
+                            Interview Prep
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    
+
+<header class="masthead" style="background-image: url('./media/es4hrce5/security.jpg?width=1903&amp;height=628&amp;v=1dbedfd45917a66')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Security Roadmap</h1>
+
+                            <span class="subheading">Step by step guide</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="umb-block-list">
+
+
+<div class="richtext ">
+    <h3 data-start="299" data-end="331">🛡️ Security Fundamentals</h3><ul data-start="333" data-end="564"><li><p data-start="335" data-end="366">What is Application Security?</p></li><li><p data-start="369" data-end="423">CIA Triad (Confidentiality, Integrity, Availability)</p></li><li><p data-start="426" data-end="447">Security vs Privacy</p></li><li><p data-start="450" data-end="499">Common Threats (XSS, CSRF, SQL Injection, etc.)</p></li><li><p data-start="502" data-end="525">OWASP Top 10 Overview</p></li><li><p data-start="528" data-end="564">Secure Development Lifecycle (SDL)</p></li></ul><p data-start="566" data-end="635">💡 <em data-start="569" data-end="635">Understanding risks is the first step in defending against them.</em></p><hr data-start="637" data-end="640"><h3 data-start="642" data-end="676">🧰 Web Application Security</h3><ul data-start="678" data-end="931"><li><p data-start="680" data-end="716">Input Validation &amp; Output Encoding</p></li><li><p data-start="719" data-end="740">HTTPS, TLS, and SSL</p></li><li><p data-start="743" data-end="782">Authentication (Sessions, JWT, OAuth)</p></li><li><p data-start="785" data-end="813">Authorization (RBAC, ABAC)</p></li><li><p data-start="816" data-end="844">Cross-Site Scripting (XSS)</p></li><li><p data-start="847" data-end="882">Cross-Site Request Forgery (CSRF)</p></li><li><p data-start="885" data-end="906">SQL/NoSQL Injection</p></li><li><p data-start="909" data-end="931">File Upload Security</p></li></ul><p data-start="933" data-end="993">🛠 Tools: OWASP ZAP, Postman, Burp Suite (Community Edition)</p><hr data-start="995" data-end="998"><h3 data-start="1000" data-end="1035">🔒 Authentication &amp; Identity</h3><ul data-start="1037" data-end="1214"><li><p data-start="1039" data-end="1082">Password Hashing (bcrypt, PBKDF2, Argon2)</p></li><li><p data-start="1085" data-end="1120">Multi-Factor Authentication (MFA)</p></li><li><p data-start="1123" data-end="1151">OAuth 2.0 / OpenID Connect</p></li><li><p data-start="1154" data-end="1176">SSO (Single Sign-On)</p></li><li><p data-start="1179" data-end="1214">Session Management Best Practices</p></li></ul><p data-start="1216" data-end="1285">💡 <em data-start="1219" data-end="1285">Never store passwords in plain text — use strong, salted hashes.</em></p><hr data-start="1287" data-end="1290"><h3 data-start="1292" data-end="1313">🔐 Secure APIs</h3><ul data-start="1315" data-end="1522"><li><p data-start="1317" data-end="1354">Securing REST APIs (Tokens, Scopes)</p></li><li><p data-start="1357" data-end="1385">Rate Limiting &amp; Throttling</p></li><li><p data-start="1388" data-end="1407">API Keys vs OAuth</p></li><li><p data-start="1410" data-end="1437">Preventing Replay Attacks</p></li><li><p data-start="1440" data-end="1460">CORS Configuration</p></li><li><p data-start="1463" data-end="1483">Input Sanitization</p></li><li><p data-start="1486" data-end="1522">Schema Validation (e.g., Joi, Zod)</p></li></ul><hr data-start="1524" data-end="1527"><h3 data-start="1529" data-end="1562">⚙️ Secure Coding Practices</h3><ul data-start="1564" data-end="1763"><li><p data-start="1566" data-end="1596">Principle of Least Privilege</p></li><li><p data-start="1599" data-end="1627">Error &amp; Exception Handling</p></li><li><p data-start="1630" data-end="1658">Avoiding Hardcoded Secrets</p></li><li><p data-start="1661" data-end="1684">Using Secure Defaults</p></li><li><p data-start="1687" data-end="1736">Handling Sensitive Data (e.g., GDPR compliance)</p></li><li><p data-start="1739" data-end="1763">Secure Deserialization</p></li></ul><p data-start="1765" data-end="1837">🧠 <em data-start="1768" data-end="1837">Code securely by default — don’t rely on external protection alone.</em></p><hr data-start="1839" data-end="1842"><h3 data-start="1844" data-end="1879">🔎 Static &amp; Dynamic Analysis</h3><ul data-start="1881" data-end="2073"><li><p data-start="1883" data-end="1927">Static Application Security Testing (SAST)</p></li><li><p data-start="1930" data-end="1975">Dynamic Application Security Testing (DAST)</p></li><li><p data-start="1978" data-end="2015">Software Composition Analysis (SCA)</p></li><li><p data-start="2018" data-end="2073">Secret Scanning Tools (e.g., GitGuardian, TruffleHog)</p></li></ul><p data-start="2075" data-end="2150">Tools: SonarQube, Snyk, Checkmarx, Bandit (Python), ESLint Security Plugins</p><hr data-start="2152" data-end="2155"><h3 data-start="2157" data-end="2196">📦 Dependency &amp; Package Security</h3><ul data-start="2198" data-end="2388"><li><p data-start="2200" data-end="2230">Keeping Dependencies Updated</p></li><li><p data-start="2233" data-end="2276">Using Package Lock Files (npm, pip, etc.)</p></li><li><p data-start="2279" data-end="2311">Verifying Package Authenticity</p></li><li><p data-start="2314" data-end="2356">Detecting Vulnerabilities with SCA Tools</p></li><li><p data-start="2359" data-end="2388">Avoiding Malicious Packages</p></li></ul><hr data-start="2390" data-end="2393"><h3 data-start="2395" data-end="2434">🧱 Secure Deployment &amp; DevSecOps</h3><ul data-start="2436" data-end="2728"><li><p data-start="2438" data-end="2484">CI/CD Security (secrets, permission scoping)</p></li><li><p data-start="2487" data-end="2536">Secrets Management (Vault, AWS Secrets Manager)</p></li><li><p data-start="2539" data-end="2599">Container Security (Docker best practices, image scanning)</p></li><li><p data-start="2602" data-end="2648">Kubernetes Security (RBAC, Network Policies)</p></li><li><p data-start="2651" data-end="2690">Infrastructure as Code (IaC) Security</p></li><li><p data-start="2693" data-end="2728">Least Privilege IAM Configuration</p></li></ul><hr data-start="2730" data-end="2733"><h3 data-start="2735" data-end="2780">🛑 Defensive Architecture &amp; Monitoring</h3><ul data-start="2782" data-end="3003"><li><p data-start="2784" data-end="2817">Web Application Firewalls (WAF)</p></li><li><p data-start="2820" data-end="2847">IDS/IPS (Snort, Suricata)</p></li><li><p data-start="2850" data-end="2874">Logging &amp; Audit Trails</p></li><li><p data-start="2877" data-end="2909">Rate Limiting &amp; DoS Protection</p></li><li><p data-start="2912" data-end="2964">Secure Headers (CSP, HSTS, X-Content-Type-Options)</p></li><li><p data-start="2967" data-end="3003">Zero Trust Architecture Principles</p></li></ul><hr data-start="3005" data-end="3008"><h3 data-start="3010" data-end="3047">🔬 Penetration Testing Basics</h3><ul data-start="3049" data-end="3262"><li><p data-start="3051" data-end="3081">What is Penetration Testing?</p></li><li><p data-start="3084" data-end="3114">Reconnaissance &amp; Enumeration</p></li><li><p data-start="3117" data-end="3149">Manual Testing with Burp Suite</p></li><li><p data-start="3152" data-end="3197">Using Kali Linux Tools (nmap, sqlmap, etc.)</p></li><li><p data-start="3200" data-end="3227">Reporting Vulnerabilities</p></li><li><p data-start="3230" data-end="3262">Legal &amp; Ethical Considerations</p></li></ul><p data-start="3264" data-end="3329">🧪 <em data-start="3267" data-end="3329">Pentesting is about thinking like an attacker — responsibly.</em></p><hr data-start="3331" data-end="3334"><h3 data-start="3336" data-end="3370">🎯 Security Interview Prep</h3><ul data-start="3372" data-end="3554"><li><p data-start="3374" data-end="3398">OWASP Top 10 Scenarios</p></li><li><p data-start="3401" data-end="3426">Secure Design Questions</p></li><li><p data-start="3429" data-end="3453">Threat Modeling Basics</p></li><li><p data-start="3456" data-end="3485">Incident Response Questions</p></li><li><p data-start="3488" data-end="3510">Explain OAuth vs JWT</p></li><li><p data-start="3513" data-end="3554">Scenario: Secure a file upload endpoint</p></li></ul><hr data-start="3556" data-end="3559"><h3 data-start="3561" data-end="3595">🤝 Resources &amp; Communities</h3><ul data-start="3597" data-end="3783"><li><p data-start="3599" data-end="3619">OWASP.org Projects</p></li><li><p data-start="3622" data-end="3653">HackerOne / Bugcrowd Writeups</p></li><li><p data-start="3656" data-end="3689">Awesome Security Lists (GitHub)</p></li><li><p data-start="3692" data-end="3729">Cybersecurity Subreddits &amp; Discords</p></li><li><p data-start="3732" data-end="3783">YouTube Channels (LiveOverflow, STÖK, NetworkChuck)</p></li></ul><p></p>
+</div></div>
+            </div>
+        </div>
+    </div>
+</article>
+    
+<!-- Footer-->
+<footer>
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center">
+                        <div class="umb-block-list">
+
+
+<li class="list-inline-item">
+    <a href="https://github.com/sekmenhuseyin" target="_blank" rel="noopener" title="View this package repository on GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 512" class="social-icon"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg>
+    </a>
+</li>
+
+<li class="list-inline-item">
+    <a href="https://bsky.app/profile/sekmen.dev" target="_blank" rel="noopener" title="Follow me on twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" class="social-icon"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+    </a>
+</li>
+
+<li class="list-inline-item">
+    <a href="https://sekmen.dev" target="_blank" rel="noopener" title="Read my blog codeshare.co.uk">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" class="social-icon"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z"></path></svg>
+    </a>
+</li></div>
+                    </ul>
+                <p class="small text-center text-muted fst-italic">Copyright &copy; 2025 H&#xFC;seyin Sekmeno&#x11F;lu</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Core theme JS-->
+    <script src="./assets/js/scripts.js?v=fMXBn8s9dSIyIg2QWQmrbXqm7eAJqAcJNY6v7zoby3o"></script>
+    <script src="./assets/js/highlight.min.js?v=Yyoa6Vsx2QantHP2E88gicAeO1DlGJnbWOuem6lWGCI"></script>
+    <script src="./assets/js/highlightjs-copy.min.js?v=e46ZEFItNB6aQvH0LVrbe5lGWgaWO51U9R8g3DMiSbQ"></script>
+    <script src="./assets/js/initHighlight.js?v=NszCHgwNZlBJCClcUK4yASC7qcFyunZ-SsGPuoQiY4E"></script>
+    <script src="./assets/js/swiffy-slider.min.js?v=QNF7Eer3iR2auwftZR_9q-8c06e2vSMJgsxrGpoeXV0"></script>
+</body>
+</html>

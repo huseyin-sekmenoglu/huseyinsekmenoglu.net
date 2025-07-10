@@ -1,0 +1,5 @@
+# XML Sitemaps
+Sitemap: https://huseyinsekmenoglu.net/sitemap.xml
+
+User-agent: *
+Allow: /
