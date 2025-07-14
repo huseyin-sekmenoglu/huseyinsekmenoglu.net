@@ -11,14 +11,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Articles | Tech Journey</title>
+<title>Converting Strings or Integers to Enums in C# | Tech Journey</title>
 <meta name="Description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
-<link rel="canonical" href="https://huseyinsekmenoglu.net/articles" />
+<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/converting-strings-or-integers-to-enums-in-c" />
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huseyinsekmenoglu.net/articles" />
+<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/converting-strings-or-integers-to-enums-in-c" />
 <meta property="og:title" content="" />
 <meta property="og:description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
@@ -111,134 +111,112 @@
     </div>
 </nav>
 
-    
-<header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/35nidypy/programmers-day-take-br.jpg?width=1903&amp;height=628&amp;v=1dbf1a3924a2a5d')">
+    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/35nidypy/programmers-day-take-br.jpg?width=1903&amp;height=628&amp;v=1dbf1a3924a2a5d')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="site-heading">
-                    <h1>Articles</h1>
+                <div class="post-heading">
+                    <h1>Converting Strings or Integers to Enums in C#</h1>
 
-                            <span class="subheading">Many blog posts for you</span>
+                            <h2 class="subheading mb-4">Safely convert values to enum types using built-in methods and checks</h2>
+                        <span class="meta">
+                            Posted
+by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;September 30, 2022
+                        </span>
+                            <span class="mt-4 d-block"></span>
+                                <a href="https://huseyinsekmenoglu.net/categories/programming-fundamentals" title="Programming Fundamentals" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Programming Fundamentals
+                                </a>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="umb-block-list">
 
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="umb-block-list">
+
+<div class="richtext ">
+    <p>Enums in C# are ideal for representing a fixed set of related constants. However, data often comes from external sources like user input, configuration files, or APIs. In such cases, the values might be in <code>int</code> or <code>string</code> format. To use them as enums, conversion is required.</p><p data-start="593" data-end="659">Here is how to safely convert a string or an integer into an enum.</p><hr data-start="661" data-end="664"><h3 data-start="666" data-end="693">🎯 Define the Enum Type</h3><p data-start="695" data-end="736">Start by defining your enum. For example:</p>
+</div>
 
 <div class="row clearfix ">
     <div class="col-md-12 column">
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/how-to-design-software-for-difficult-users">
-                    <h2 class="post-title">
-                        How to Design Software for Difficult Users
-                    </h2>
-                        <h3 class="post-subtitle">Popular blogs and magazines about Umbraco</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on October 23, 2014
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/running-classic-dos-games-on-modern-windows">
-                    <h2 class="post-title">
-                        Running Classic DOS Games on Modern Windows
-                    </h2>
-                        <h3 class="post-subtitle">Why old games stopped working and how to bring them back with DOSBox</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on August 23, 2014
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/how-to-automatically-back-up-mysql-databases-on-windows-server">
-                    <h2 class="post-title">
-                        How to Automatically Back Up MySQL Databases on Windows Server
-                    </h2>
-                        <h3 class="post-subtitle">A simple method using 7-Zip, a batch script, and Windows Task Scheduler</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on January 10, 2014
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/how-to-batch-rename-files-easily">
-                    <h2 class="post-title">
-                        How to Batch Rename Files Easily
-                    </h2>
-                        <h3 class="post-subtitle">Rename multiple files in seconds using Bulk Rename Utility</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on July 01, 2012
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/how-to-create-a-mosaic-photo-easily">
-                    <h2 class="post-title">
-                        How to Create a Mosaic Photo Easily
-                    </h2>
-                        <h3 class="post-subtitle">A step-by-step guide to making mosaic images using AndreaMosaic</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 19, 2012
-                </p>
-            </div>
-            <hr>
-
-
-<nav aria-label="Pagination controls">
-        <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/5">Prev</a>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-
-                <li class="page-item">
-                    <a class="page-link" href="https://huseyinsekmenoglu.net/articles/page/5">5</a>
-                </li>
-                <li class="page-item">
-                        <strong>
-                    <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/6">6</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="https://huseyinsekmenoglu.net/articles/page/7">7</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/7">Next</a>
-                </li>
-        </ul>
-</nav>    </div>
+        <pre><code>public enum Days&#xA;{&#xA;  Monday = 1,&#xA;  Tuesday = 2,&#xA;  Wednesday = 3,&#xA;  Thursday = 4,&#xA;  Friday = 5,&#xA;  Saturday = 6,&#xA;  Sunday = 7&#xA;}&#xA;</code></pre>
+    </div>
 </div>
+
+<div class="richtext ">
+    <hr data-start="879" data-end="882"><h3 data-start="884" data-end="917">🔢 Convert from <code>int</code> to Enum</h3><p data-start="919" data-end="993">If you are working with numeric values, you can cast the integer directly:</p>
 </div>
-                </div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>Days value = (Days)1;  // value = Days.Monday</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>This approach is fast, but keep in mind that casting an invalid number does not throw an error. Instead, it returns the numeric value, even if it does not correspond to a defined enum member.</p><p data-start="1249" data-end="1301">You can check validity first using <code>Enum.IsDefined</code>:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>if (Enum.IsDefined(typeof(Days), 3))&#xA;{&#xA;  Days value = (Days)3;&#xA;  // value = Days.Wednesday&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <hr data-start="1411" data-end="1414"><h3 data-start="1416" data-end="1452">🔤 Convert from <code>string</code> to Enum</h3><p data-start="1454" data-end="1529">To convert a string to its corresponding enum, use the <code>Enum.Parse</code> method:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>Days value = (Days)Enum.Parse(typeof(Days), &quot;Friday&quot;);</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>If the string is not a valid enum name, this will throw an exception. You can prevent this with a try-catch block:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>try&#xA;{&#xA;  Days value = (Days)Enum.Parse(typeof(Days), &quot;Funday&quot;);&#xA;}&#xA;catch (ArgumentException)&#xA;{&#xA;  // Handle invalid value&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>Or use <code>Enum.TryParse</code> for a cleaner and safer approach:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>if (Enum.TryParse(&quot;Friday&quot;, out Days value))&#xA;{&#xA;  // value is Days.Friday&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>You can also make it case-insensitive:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>Enum.TryParse(&quot;friday&quot;, true, out Days value);</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <hr data-start="2103" data-end="2106"><h3 data-start="2108" data-end="2128">✅ Best Practices</h3><ul data-start="2130" data-end="2353"><li><p data-start="2132" data-end="2195">Use <code>Enum.TryParse</code> instead of <code>Enum.Parse</code> to avoid exceptions</p></li><li><p data-start="2198" data-end="2270">Use <code>Enum.IsDefined</code> when converting from integers to validate the value</p></li><li><p data-start="2273" data-end="2353">Handle unexpected values gracefully, especially with user input or external data</p></li></ul><hr data-start="2355" data-end="2358"><p data-start="2360" data-end="2552" data-is-last-node="" data-is-only-node=""><strong data-start="2360" data-end="2374">Final Tip:</strong><br>Enums make your code easier to read and maintain. Converting values to enums the right way ensures your application behaves predictably and safely, even with unexpected input.</p>
+</div></div>
             </div>
         </div>
-    </article>
-
+    </div>
+</article>
     
 <!-- Footer-->
 <footer>

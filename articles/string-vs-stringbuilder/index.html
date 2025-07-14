@@ -11,14 +11,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Articles | Tech Journey</title>
+<title>String vs StringBuilder | Tech Journey</title>
 <meta name="Description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
-<link rel="canonical" href="https://huseyinsekmenoglu.net/articles" />
+<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/string-vs-stringbuilder" />
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huseyinsekmenoglu.net/articles" />
+<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/string-vs-stringbuilder" />
 <meta property="og:title" content="" />
 <meta property="og:description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
@@ -111,134 +111,72 @@
     </div>
 </nav>
 
-    
-<header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/35nidypy/programmers-day-take-br.jpg?width=1903&amp;height=628&amp;v=1dbf1a3924a2a5d')">
+    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/35nidypy/programmers-day-take-br.jpg?width=1903&amp;height=628&amp;v=1dbf1a3924a2a5d')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="site-heading">
-                    <h1>Articles</h1>
+                <div class="post-heading">
+                    <h1>String vs StringBuilder</h1>
 
-                            <span class="subheading">Many blog posts for you</span>
+                            <h2 class="subheading mb-4">Understand when to choose immutable strings or performance-friendly StringBuilder</h2>
+                        <span class="meta">
+                            Posted
+by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;December 23, 2020
+                        </span>
+                            <span class="mt-4 d-block"></span>
+                                <a href="https://huseyinsekmenoglu.net/categories/programming-fundamentals" title="Programming Fundamentals" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Programming Fundamentals
+                                </a>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="umb-block-list">
 
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="umb-block-list">
+
+<div class="richtext ">
+    <p>In C#, both <code>string</code> and <code>StringBuilder</code> are used to handle sequences of characters, but they behave very differently behind the scenes. Choosing the right one affects performance, memory usage, and code clarity—especially in loops or high-frequency updates.</p><hr data-start="585" data-end="588"><h3 data-start="590" data-end="612">🧠 Key Differences</h3><p></p>
+</div>
 
 <div class="row clearfix ">
     <div class="col-md-12 column">
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/how-to-design-software-for-difficult-users">
-                    <h2 class="post-title">
-                        How to Design Software for Difficult Users
-                    </h2>
-                        <h3 class="post-subtitle">Popular blogs and magazines about Umbraco</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on October 23, 2014
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/running-classic-dos-games-on-modern-windows">
-                    <h2 class="post-title">
-                        Running Classic DOS Games on Modern Windows
-                    </h2>
-                        <h3 class="post-subtitle">Why old games stopped working and how to bring them back with DOSBox</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on August 23, 2014
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/how-to-automatically-back-up-mysql-databases-on-windows-server">
-                    <h2 class="post-title">
-                        How to Automatically Back Up MySQL Databases on Windows Server
-                    </h2>
-                        <h3 class="post-subtitle">A simple method using 7-Zip, a batch script, and Windows Task Scheduler</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on January 10, 2014
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/how-to-batch-rename-files-easily">
-                    <h2 class="post-title">
-                        How to Batch Rename Files Easily
-                    </h2>
-                        <h3 class="post-subtitle">Rename multiple files in seconds using Bulk Rename Utility</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on July 01, 2012
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/how-to-create-a-mosaic-photo-easily">
-                    <h2 class="post-title">
-                        How to Create a Mosaic Photo Easily
-                    </h2>
-                        <h3 class="post-subtitle">A step-by-step guide to making mosaic images using AndreaMosaic</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 19, 2012
-                </p>
-            </div>
-            <hr>
-
-
-<nav aria-label="Pagination controls">
-        <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/5">Prev</a>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-
-                <li class="page-item">
-                    <a class="page-link" href="https://huseyinsekmenoglu.net/articles/page/5">5</a>
-                </li>
-                <li class="page-item">
-                        <strong>
-                    <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/6">6</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="https://huseyinsekmenoglu.net/articles/page/7">7</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/7">Next</a>
-                </li>
-        </ul>
-</nav>    </div>
+        <pre><code>| Feature               | String                                     | StringBuilder                         |&#xA;| --------------------- | ------------------------------------------ | ------------------------------------- |&#xA;| Mutability            | &#x274C; Immutable                                | &#x2705; Mutable                             |&#xA;| Memory Allocation     | Each change creates a new object in memory | Same object is reused                 |&#xA;| Thread-Safety         | &#x2705; Safe                                     | &#x274C; Not thread-safe by default          |&#xA;| Speed in Loops        | &#x274C; Slow (recreates strings repeatedly)      | &#x2705; Fast (modifies buffer directly)     |&#xA;| Features &amp; Simplicity | &#x2705; Simple to use, many built-in methods     | &#x274C; Fewer methods, more manual          |&#xA;| Use Case              | Small, rarely-changing texts               | Large, frequently updated texts       |&#xA;| Null Assignment       | &#x2705; Can be null                              | &#x274C; Cannot be null after initialization |&#xA;</code></pre>
+    </div>
 </div>
+
+<div class="richtext ">
+    <hr data-start="1774" data-end="1777"><h3 data-start="1779" data-end="1808">📦 Memory and Performance</h3><ul data-start="1810" data-end="2137"><li><p data-start="1812" data-end="2002"><code>string</code> is stored in memory as an immutable object. Every time you change it, a new object is created. This leads to memory pressure and garbage collection overhead in intensive operations.</p></li><li><p data-start="2005" data-end="2137"><code>StringBuilder</code> stores characters in a buffer. Appending or modifying text happens in-place without creating a new object each time.</p></li></ul><hr data-start="2139" data-end="2142"><h3 data-start="2144" data-end="2169">📋 Example Comparison</h3><p data-start="2171" data-end="2188"><strong data-start="2171" data-end="2188">Using string:</strong></p>
 </div>
-                </div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>string colors;&#xA;colors &#x2B;= &quot;red&quot;;&#xA;colors &#x2B;= &quot;blue&quot;;&#xA;colors &#x2B;= &quot;green&quot;;&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>Each <code>+=</code> line creates a brand new string in memory. That means 3 new allocations.</p><p data-start="2357" data-end="2381"><strong data-start="2357" data-end="2381">Using StringBuilder:</strong></p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>StringBuilder sb = new StringBuilder();&#xA;sb.Append(&quot;red&quot;);&#xA;sb.Append(&quot;blue&quot;);&#xA;sb.Append(&quot;green&quot;);&#xA;string colors = sb.ToString();&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>All operations modify the same buffer, making it ideal inside loops or when building long strings.</p><hr data-start="2625" data-end="2628"><h3 data-start="2630" data-end="2653">🧪 When to Use What</h3><p data-start="2655" data-end="2673">Use <code>string</code> when:</p><ul data-start="2674" data-end="2787"><li><p data-start="2676" data-end="2706">Your text changes infrequently</p></li><li><p data-start="2709" data-end="2747">You prefer simplicity over performance</p></li><li><p data-start="2750" data-end="2787">You’re working with small text values</p></li></ul><p data-start="2789" data-end="2814">Use <code>StringBuilder</code> when:</p><ul data-start="2815" data-end="2954"><li><p data-start="2817" data-end="2857">You need to manipulate large text blocks</p></li><li><p data-start="2860" data-end="2894">You’re appending strings in a loop</p></li><li><p data-start="2897" data-end="2954">You want better performance with fewer memory allocations</p></li></ul><p data-start="2956" data-end="3047" data-is-last-node="" data-is-only-node="">Choosing the right tool for the job makes a huge difference in code quality and efficiency.</p>
+</div></div>
             </div>
         </div>
-    </article>
-
+    </div>
+</article>
     
 <!-- Footer-->
 <footer>
