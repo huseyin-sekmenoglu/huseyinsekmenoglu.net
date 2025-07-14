@@ -1,0 +1,13 @@
+https://huseyinsekmenoglu.net/*
+  X-Robots-Tag: noindex
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: fullscreen=(self)
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' use.fontawesome.com challenges.cloudflare.com cdn.jsdelivr.net www.googletagmanager.com www.google-analytics.com static.cloudflareinsights.com;connect-src 'self' www.google-analytics.com; style-src 'self' 'unsafe-inline' use.fontawesome.com fonts.googleapis.com cdn.jsdelivr.net;font-src 'self' fonts.gstatic.com fonts.googleapis.com use.fontawesome.com
+
+/assets/*
+  Cache-Control: public, max-age=31556952, immutable
+
+/media/*
+  Cache-Control: public, max-age=31556952, immutable
