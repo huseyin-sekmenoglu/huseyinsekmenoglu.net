@@ -11,14 +11,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Converting Strings or Integers to Enums in C# | Tech Journey</title>
+<title>Effective Communication in Interviews | Tech Journey</title>
 <meta name="Description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
-<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/converting-strings-or-integers-to-enums-in-c" />
+<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/effective-communication-in-interviews" />
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/converting-strings-or-integers-to-enums-in-c" />
+<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/effective-communication-in-interviews" />
 <meta property="og:title" content="" />
 <meta property="og:description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
@@ -110,21 +110,21 @@
     </div>
 </nav>
 
-    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/uiqb2uvm/programming-fundamentals.webp?width=1903&amp;height=628&amp;v=1dbf5881f20dfb4')">
+    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/c5pbgoxm/interview-prep.png?width=1903&amp;height=628&amp;v=1dbf589b0861bca')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="post-heading">
-                    <h1>Converting Strings or Integers to Enums in C#</h1>
+                    <h1>Effective Communication in Interviews</h1>
 
-                            <h2 class="subheading mb-4">Safely convert values to enum types using built-in methods and checks</h2>
+                            <h2 class="subheading mb-4">Why how you talk matters as much as how you code</h2>
                         <span class="meta">
                             Posted
-by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;September 30, 2022
+by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;August 15, 2024
                         </span>
                             <span class="mt-4 d-block"></span>
-                                <a href="https://huseyinsekmenoglu.net/categories/programming-fundamentals" title="Programming Fundamentals" class="badge rounded-pill bg-light text-dark border-dark border-5">
-                                    Programming Fundamentals
+                                <a href="https://huseyinsekmenoglu.net/categories/career-interview-prep" title="Career &amp; Interview Prep" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Career &amp; Interview Prep
                                 </a>
                 </div>
             </div>
@@ -140,77 +140,7 @@ by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;Septemb
 
 
 <div class="richtext ">
-    <p>Enums in C# are ideal for representing a fixed set of related constants. However, data often comes from external sources like user input, configuration files, or APIs. In such cases, the values might be in <code>int</code> or <code>string</code> format. To use them as enums, conversion is required.</p><p data-start="593" data-end="659">Here is how to safely convert a string or an integer into an enum.</p><hr data-start="661" data-end="664"><h3 data-start="666" data-end="693">🎯 Define the Enum Type</h3><p data-start="695" data-end="736">Start by defining your enum. For example:</p>
-</div>
-
-<div class="row clearfix ">
-    <div class="col-md-12 column">
-        <pre><code>public enum Days&#xA;{&#xA;  Monday = 1,&#xA;  Tuesday = 2,&#xA;  Wednesday = 3,&#xA;  Thursday = 4,&#xA;  Friday = 5,&#xA;  Saturday = 6,&#xA;  Sunday = 7&#xA;}&#xA;</code></pre>
-    </div>
-</div>
-
-<div class="richtext ">
-    <hr data-start="879" data-end="882"><h3 data-start="884" data-end="917">🔢 Convert from <code>int</code> to Enum</h3><p data-start="919" data-end="993">If you are working with numeric values, you can cast the integer directly:</p>
-</div>
-
-<div class="row clearfix ">
-    <div class="col-md-12 column">
-        <pre><code>Days value = (Days)1;  // value = Days.Monday</code></pre>
-    </div>
-</div>
-
-<div class="richtext ">
-    <p>This approach is fast, but keep in mind that casting an invalid number does not throw an error. Instead, it returns the numeric value, even if it does not correspond to a defined enum member.</p><p data-start="1249" data-end="1301">You can check validity first using <code>Enum.IsDefined</code>:</p>
-</div>
-
-<div class="row clearfix ">
-    <div class="col-md-12 column">
-        <pre><code>if (Enum.IsDefined(typeof(Days), 3))&#xA;{&#xA;  Days value = (Days)3;&#xA;  // value = Days.Wednesday&#xA;}&#xA;</code></pre>
-    </div>
-</div>
-
-<div class="richtext ">
-    <hr data-start="1411" data-end="1414"><h3 data-start="1416" data-end="1452">🔤 Convert from <code>string</code> to Enum</h3><p data-start="1454" data-end="1529">To convert a string to its corresponding enum, use the <code>Enum.Parse</code> method:</p>
-</div>
-
-<div class="row clearfix ">
-    <div class="col-md-12 column">
-        <pre><code>Days value = (Days)Enum.Parse(typeof(Days), &quot;Friday&quot;);</code></pre>
-    </div>
-</div>
-
-<div class="richtext ">
-    <p>If the string is not a valid enum name, this will throw an exception. You can prevent this with a try-catch block:</p>
-</div>
-
-<div class="row clearfix ">
-    <div class="col-md-12 column">
-        <pre><code>try&#xA;{&#xA;  Days value = (Days)Enum.Parse(typeof(Days), &quot;Funday&quot;);&#xA;}&#xA;catch (ArgumentException)&#xA;{&#xA;  // Handle invalid value&#xA;}&#xA;</code></pre>
-    </div>
-</div>
-
-<div class="richtext ">
-    <p>Or use <code>Enum.TryParse</code> for a cleaner and safer approach:</p>
-</div>
-
-<div class="row clearfix ">
-    <div class="col-md-12 column">
-        <pre><code>if (Enum.TryParse(&quot;Friday&quot;, out Days value))&#xA;{&#xA;  // value is Days.Friday&#xA;}&#xA;</code></pre>
-    </div>
-</div>
-
-<div class="richtext ">
-    <p>You can also make it case-insensitive:</p>
-</div>
-
-<div class="row clearfix ">
-    <div class="col-md-12 column">
-        <pre><code>Enum.TryParse(&quot;friday&quot;, true, out Days value);</code></pre>
-    </div>
-</div>
-
-<div class="richtext ">
-    <hr data-start="2103" data-end="2106"><h3 data-start="2108" data-end="2128">✅ Best Practices</h3><ul data-start="2130" data-end="2353"><li><p data-start="2132" data-end="2195">Use <code>Enum.TryParse</code> instead of <code>Enum.Parse</code> to avoid exceptions</p></li><li><p data-start="2198" data-end="2270">Use <code>Enum.IsDefined</code> when converting from integers to validate the value</p></li><li><p data-start="2273" data-end="2353">Handle unexpected values gracefully, especially with user input or external data</p></li></ul><hr data-start="2355" data-end="2358"><p data-start="2360" data-end="2552" data-is-last-node="" data-is-only-node=""><strong data-start="2360" data-end="2374">Final Tip:</strong><br>Enums make your code easier to read and maintain. Converting values to enums the right way ensures your application behaves predictably and safely, even with unexpected input.</p>
+    <h3 data-start="225" data-end="246">💬 Think Out Loud</h3><p data-start="248" data-end="402">Don’t keep your thoughts hidden. Talk through your ideas as you explore the problem.<br>Interviewers want to see your reasoning, not just the final answer.</p><hr data-start="404" data-end="407"><h3 data-start="409" data-end="448">👀 Keep the Interviewer in the Loop</h3><p data-start="450" data-end="470">Check in frequently:</p><ul data-start="471" data-end="549"><li><p data-start="473" data-end="503">“Does that make sense so far?”</p></li><li><p data-start="506" data-end="549">“Would you like me to expand on this part?”</p></li></ul><p data-start="551" data-end="614">This helps clarify confusion early and avoid misunderstandings.</p><hr data-start="616" data-end="619"><h3 data-start="621" data-end="648">🔄 Discuss Alternatives</h3><p data-start="650" data-end="717">If you're choosing between different approaches or data structures:</p><ul data-start="718" data-end="786"><li><p data-start="720" data-end="736">List the options</p></li><li><p data-start="739" data-end="758">Weigh pros and cons</p></li><li><p data-start="761" data-end="786">Justify your final choice</p></li></ul><p data-start="788" data-end="859">This shows your ability to evaluate trade-offs—a key engineering skill.</p><hr data-start="861" data-end="864"><h3 data-start="866" data-end="898">🆘 Explain When You're Stuck</h3><p data-start="900" data-end="1057">Stuck? Don’t go silent.<br>Say what you’ve tried, what’s not working, and what you’re thinking next.<br>It invites guidance and shows resilience, not weakness.</p><hr data-start="1059" data-end="1062"><h3 data-start="1064" data-end="1091">⏳ Ask for Thinking Time</h3><p data-start="1093" data-end="1117">Need a minute? Just say:</p><blockquote data-start="1118" data-end="1170"><p data-start="1120" data-end="1170">“Let me take a few seconds to think this through.”</p></blockquote><p data-start="1172" data-end="1217">It signals that you’re thoughtful—not frozen.</p><hr data-start="1219" data-end="1222"><p data-start="1224" data-end="1383"><strong data-start="1224" data-end="1237">Remember:</strong><br>Interviewers are evaluating your <strong data-start="1273" data-end="1297">collaboration skills</strong>, not just your code. Great communication can often make up for an imperfect solution.</p>
 </div></div>
             </div>
         </div>
@@ -219,7 +149,7 @@ by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;Septemb
                 <div class="article-navigation">
     <ul class="flex justify-between">
         <li class="article-navigation-item">
-                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/access-modifiers-in-c" title="Previous Article">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/how-to-approach-a-problem-in-an-interview" title="Previous Article">
                     <div class="flex items-center justify-center md:justify-start">
                         &lt; &nbsp;
                         <p class="font-primary">
@@ -227,12 +157,12 @@ by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;Septemb
                         </p>
                     </div>
                     <h5 class="hidden md:block text-lg text-primary mb-1 font-black">
-                        Access Modifiers in C#
+                        How to Approach a Problem in an Interview
                     </h5>
                 </a>
         </li>
             <li class="article-navigation-item">
-                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/formatting-json-date-values-in-javascript" title="Next Article">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/7-steps-to-avoid-the-worst-day-of-your-career" title="Next Article">
                     <div class="flex items-center flex-row-reverse md:flex-row justify-center md:justify-end">
                         &nbsp; &gt;
                         <p class="font-primary">
@@ -240,7 +170,7 @@ by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;Septemb
                         </p>
                     </div>
                     <h5 class="hidden md:block text-lg text-primary mb-1 font-black text-right">
-                        Formatting JSON Date Values in JavaScript
+                        7 Steps to Avoid the Worst Day of Your Career
                     </h5>
                 </a>
             </li>
