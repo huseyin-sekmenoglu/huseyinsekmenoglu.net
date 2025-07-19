@@ -61,3 +61,24 @@
         justify-content: flex-start;
     }
 }
+
+footer {
+    background: linear-gradient(to top, rgba(255,255,255,0) 20%, rgba(255,255,255,1)), url('/assets/istanbul-bosphorus-bridge.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 400px;
+}
+
+footer a, footer p {
+    font-weight: 700 !important;
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
+    text-shadow: 0 0 10px black;
+}
+
+footer svg.blue path {
+    fill: midnightblue;
+}
+footer svg.red path {
+    fill: darkred;
+}
