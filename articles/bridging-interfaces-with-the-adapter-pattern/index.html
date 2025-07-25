@@ -11,14 +11,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Articles | Tech Journey</title>
+<title>Bridging Interfaces with the Adapter Pattern | Tech Journey</title>
 <meta name="Description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
-<link rel="canonical" href="https://huseyinsekmenoglu.net/articles" />
+<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/bridging-interfaces-with-the-adapter-pattern" />
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huseyinsekmenoglu.net/articles" />
+<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/bridging-interfaces-with-the-adapter-pattern" />
 <meta property="og:title" content="" />
 <meta property="og:description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
@@ -114,135 +114,96 @@
     </div>
 </nav>
 
-    
-<header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/35nidypy/programmers-day-take-br.jpg?width=1903&amp;height=628&amp;v=1dbf1a3924a2a5d')">
+    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/h5hhq01l/design-patterns.png?width=1903&amp;height=628&amp;v=1dbf58aa9d3c19c')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="site-heading">
-                    <h1>Articles</h1>
+                <div class="post-heading">
+                    <h1>Bridging Interfaces with the Adapter Pattern</h1>
 
-                            <span class="subheading">Many blog posts for you</span>
+                            <h2 class="subheading mb-4">Make incompatible systems work together seamlessly</h2>
+                        <span class="meta">
+                            Posted
+by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;February 24, 2021
+                        </span>
+                            <span class="mt-4 d-block"></span>
+                                <a href="https://huseyinsekmenoglu.net/categories/design-patterns" title="Design Patterns" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Design Patterns
+                                </a>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="umb-block-list">
 
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="umb-block-list">
+
+<div class="richtext ">
+    <h2 data-start="243" data-end="277">🤔 What Is the Adapter Pattern?</h2><p data-start="279" data-end="496">The <strong data-start="283" data-end="302">Adapter Pattern</strong> is a structural design pattern that allows objects with incompatible interfaces to work together. It acts as a <strong data-start="414" data-end="424">bridge</strong> between two different systems by wrapping one interface inside another.</p><p data-start="498" data-end="581">Think of it as a plug adapter that lets a foreign device connect to a local socket.</p><hr data-start="583" data-end="586"><h2 data-start="588" data-end="608">📦 When to Use It</h2><p data-start="610" data-end="639">Use the Adapter Pattern when:</p><ul data-start="641" data-end="884"><li><p data-start="643" data-end="713">You want to reuse existing classes without modifying their source code</p></li><li><p data-start="716" data-end="800">You need to integrate with third-party APIs that don’t match your expected interface</p></li><li><p data-start="803" data-end="884">You are migrating from legacy systems and need to maintain backward compatibility</p></li></ul><p data-start="886" data-end="904">Typical scenarios:</p><ul data-start="906" data-end="1052"><li><p data-start="908" data-end="949">Wrapping old code with a modern interface</p></li><li><p data-start="952" data-end="1003">Adapting third-party libraries to your domain model</p></li><li><p data-start="1006" data-end="1052">Integrating services with mismatched contracts</p></li></ul><hr data-start="1054" data-end="1057"><h2 data-start="1059" data-end="1078">🛠️ How It Works</h2><p data-start="1080" data-end="1109">The Adapter Pattern includes:</p><ol data-start="1111" data-end="1319"><li><p data-start="1114" data-end="1157">A <strong data-start="1116" data-end="1126">client</strong> expecting a specific interface</p></li><li><p data-start="1161" data-end="1222">A <strong data-start="1163" data-end="1195">legacy or incompatible class</strong> with a different interface</p></li><li><p data-start="1226" data-end="1319">An <strong data-start="1229" data-end="1240">adapter</strong> that translates the incompatible interface into the one expected by the client</p></li></ol><h3 data-start="1321" data-end="1372">C# Example: Audio Player Adapting Media Formats</h3><p></p>
+</div>
 
 <div class="row clearfix ">
     <div class="col-md-12 column">
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/what-makes-a-good-developer">
-                    <h2 class="post-title">
-                        What Makes a Good Developer
-                    </h2>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on October 15, 2019
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/types-of-locks-in-sql-server">
-                    <h2 class="post-title">
-                        Types of Locks in SQL Server
-                    </h2>
-                        <h3 class="post-subtitle">A Quick Guide to Shared, Exclusive, Update, and Intent Locks</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 27, 2018
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/value-type-vs-reference-type">
-                    <h2 class="post-title">
-                        Value Type vs Reference Type
-                    </h2>
-                        <h3 class="post-subtitle">Understanding memory behavior, data handling, and core differences</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 25, 2018
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/how-to-evaluate-the-quality-of-a-software-team">
-                    <h2 class="post-title">
-                        How to Evaluate the Quality of a Software Team
-                    </h2>
-                        <h3 class="post-subtitle">A simple yet powerful checklist that says a lot more than lines of code</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 16, 2018
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/the-most-important-secret-in-programming">
-                    <h2 class="post-title">
-                        The Most Important Secret in Programming
-                    </h2>
-                        <h3 class="post-subtitle">Why solving the right problem matters more than solving it fast</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on March 02, 2018
-                </p>
-            </div>
-            <hr>
-
-
-<nav aria-label="Pagination controls">
-        <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/6">Prev</a>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-
-                <li class="page-item">
-                    <a class="page-link" href="https://huseyinsekmenoglu.net/articles/page/6">6</a>
-                </li>
-                <li class="page-item">
-                        <strong>
-                    <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/7">7</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="https://huseyinsekmenoglu.net/articles/page/8">8</a>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/8">Next</a>
-                </li>
-        </ul>
-</nav>    </div>
+        <pre><code>// Target interface&#xA;public interface IAudioPlayer&#xA;{&#xA;    void Play(string fileName);&#xA;}&#xA;&#xA;// Adaptee with a different interface&#xA;public class Mp4Player&#xA;{&#xA;    public void PlayMp4(string fileName)&#xA;    {&#xA;        Console.WriteLine($&quot;Playing MP4 file: {fileName}&quot;);&#xA;    }&#xA;}&#xA;&#xA;// Adapter&#xA;public class Mp4Adapter : IAudioPlayer&#xA;{&#xA;    private readonly Mp4Player _mp4Player;&#xA;&#xA;    public Mp4Adapter(Mp4Player mp4Player)&#xA;    {&#xA;        _mp4Player = mp4Player;&#xA;    }&#xA;&#xA;    public void Play(string fileName)&#xA;    {&#xA;        _mp4Player.PlayMp4(fileName);&#xA;    }&#xA;}&#xA;</code></pre>
+    </div>
 </div>
+
+<div class="richtext ">
+    <h3 data-start="1929" data-end="1938">Usage</h3><p></p>
 </div>
-                </div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>IAudioPlayer player = new Mp4Adapter(new Mp4Player());&#xA;player.Play(&quot;song.mp4&quot;);&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <hr data-start="2035" data-end="2038"><h2 data-start="2040" data-end="2055">✅ Advantages</h2><ul data-start="2057" data-end="2250"><li><p data-start="2059" data-end="2128">Promotes reusability by allowing incompatible interfaces to cooperate</p></li><li><p data-start="2131" data-end="2201">Follows the Open/Closed Principle since you don’t modify existing code</p></li><li><p data-start="2204" data-end="2250">Makes your system more flexible and extensible</p></li></ul><hr data-start="2252" data-end="2255"><h2 data-start="2257" data-end="2275">❌ Disadvantages</h2><ul data-start="2277" data-end="2443"><li><p data-start="2279" data-end="2331">Introduces extra layers which may affect performance</p></li><li><p data-start="2334" data-end="2386">Can become complicated if too many adapters are used</p></li><li><p data-start="2389" data-end="2443">May hide the limitations or quirks of the adapted code</p></li></ul><hr data-start="2445" data-end="2448"><h2 data-start="2450" data-end="2472">🧪 Testing Benefits</h2><ul data-start="2474" data-end="2667"><li><p data-start="2476" data-end="2525">You can mock the adapter interface for unit tests</p></li><li><p data-start="2528" data-end="2598">Allows isolation of external libraries or legacy systems in your tests</p></li><li><p data-start="2601" data-end="2667">Helps enforce separation of concerns by wrapping third-party logic</p></li></ul><hr data-start="2669" data-end="2672"><h2 data-start="2674" data-end="2700">🌍 Real-World Use Cases</h2><ul data-start="2702" data-end="3028"><li><p data-start="2704" data-end="2779"><strong data-start="2704" data-end="2724">Payment gateways</strong>: Wrapping various APIs into a common payment interface</p></li><li><p data-start="2782" data-end="2863"><strong data-start="2782" data-end="2804">Logging frameworks</strong>: Adapting one logging provider to match a custom interface</p></li><li><p data-start="2866" data-end="2941"><strong data-start="2866" data-end="2883">UI components</strong>: Bridging incompatible widgets in cross-platform toolkits</p></li><li><p data-start="2944" data-end="3028"><strong data-start="2944" data-end="2960">File systems</strong>: Abstracting platform-specific operations under a unified interface</p></li></ul><hr data-start="3030" data-end="3033"><h2 data-start="3035" data-end="3057">🔗 Related Patterns</h2><ul data-start="3059" data-end="3291"><li><p data-start="3061" data-end="3127"><strong data-start="3061" data-end="3071">Facade</strong>: Simplifies a subsystem but keeps interfaces compatible</p></li><li><p data-start="3130" data-end="3198"><strong data-start="3130" data-end="3143">Decorator</strong>: Adds new functionality while preserving the interface</p></li><li><p data-start="3201" data-end="3291"><strong data-start="3201" data-end="3211">Bridge</strong>: Decouples abstraction from implementation, while Adapter changes the interface</p></li></ul><hr data-start="3293" data-end="3296"><h2 data-start="3298" data-end="3318">🎯 Final Thoughts</h2><p data-start="3320" data-end="3651">The Adapter Pattern lets you <strong data-start="3349" data-end="3369">connect the dots</strong> between systems that were never designed to talk to each other. It is especially useful when working with legacy code, third-party APIs, or integrating heterogeneous systems. Just be careful not to overuse adapters or wrap poorly designed code without addressing underlying issues.</p>
+</div></div>
             </div>
         </div>
-    </article>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="article-navigation">
+    <ul class="flex justify-between">
+        <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/how-to-stop-your-emails-from-going-to-spam" title="Previous Article">
+                    <div class="flex items-center justify-center md:justify-start">
+                        &lt; &nbsp;
+                        <p class="font-primary">
+                            Previous Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black">
+                        How to Stop Your Emails from Going to Spam
+                    </h5>
+                </a>
+        </li>
+            <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/flexible-behaviors-with-the-strategy-pattern" title="Next Article">
+                    <div class="flex items-center flex-row-reverse md:flex-row justify-center md:justify-end">
+                        &nbsp; &gt;
+                        <p class="font-primary">
+                            Next Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black text-right">
+                        Flexible Behaviors with the Strategy Pattern
+                    </h5>
+                </a>
+            </li>
+    </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</article>
 
     
 <footer>

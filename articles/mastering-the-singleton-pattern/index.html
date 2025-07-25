@@ -11,14 +11,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Articles | Tech Journey</title>
+<title>Mastering the Singleton Pattern | Tech Journey</title>
 <meta name="Description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
-<link rel="canonical" href="https://huseyinsekmenoglu.net/articles" />
+<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/mastering-the-singleton-pattern" />
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huseyinsekmenoglu.net/articles" />
+<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/mastering-the-singleton-pattern" />
 <meta property="og:title" content="" />
 <meta property="og:description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
@@ -114,135 +114,86 @@
     </div>
 </nav>
 
-    
-<header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/35nidypy/programmers-day-take-br.jpg?width=1903&amp;height=628&amp;v=1dbf1a3924a2a5d')">
+    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/h5hhq01l/design-patterns.png?width=1903&amp;height=628&amp;v=1dbf58aa9d3c19c')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="site-heading">
-                    <h1>Articles</h1>
+                <div class="post-heading">
+                    <h1>Mastering the Singleton Pattern</h1>
 
-                            <span class="subheading">Many blog posts for you</span>
+                            <h2 class="subheading mb-4">Ensure controlled global access to your most critical resources</h2>
+                        <span class="meta">
+                            Posted
+by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;May 09, 2020
+                        </span>
+                            <span class="mt-4 d-block"></span>
+                                <a href="https://huseyinsekmenoglu.net/categories/design-patterns" title="Design Patterns" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Design Patterns
+                                </a>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="umb-block-list">
 
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="umb-block-list">
+
+<div class="richtext ">
+    <h2 data-start="240" data-end="276">🧠 What Is the Singleton Pattern?</h2><p data-start="278" data-end="486">The <strong data-start="282" data-end="303">Singleton Pattern</strong> is a design pattern that restricts the instantiation of a class to a single object. This is especially useful when exactly one object is needed to coordinate actions across a system.</p><p data-start="488" data-end="610">In short, it's a controlled global instance that ensures consistency and prevents the overhead of multiple instantiations.</p><hr data-start="612" data-end="615"><h2 data-start="617" data-end="637">🧩 When to Use It</h2><p data-start="639" data-end="675">The Singleton Pattern is ideal when:</p><ul data-start="677" data-end="860"><li><p data-start="679" data-end="744">Only one instance of a class is needed throughout the application</p></li><li><p data-start="747" data-end="790">A centralized point of control is necessary</p></li><li><p data-start="793" data-end="860">Instantiation is resource-intensive or must be delayed until needed</p></li></ul><p data-start="862" data-end="897">Common real-world examples include:</p><ul data-start="899" data-end="1014"><li><p data-start="901" data-end="925">Configuration managers</p></li><li><p data-start="928" data-end="946">Logging services</p></li><li><p data-start="949" data-end="969">Caching mechanisms</p></li><li><p data-start="972" data-end="986">Thread pools</p></li><li><p data-start="989" data-end="1014">Database connection pools</p></li></ul><hr data-start="1016" data-end="1019"><h2 data-start="1021" data-end="1040">🛠️ How It Works</h2><p data-start="1042" data-end="1148">The core idea is simple: ensure a class has only one instance and provide a global point of access to it.</p><h3 data-start="1150" data-end="1200">C# Implementation (Thread-Safe Lazy Singleton)</h3><p></p>
+</div>
 
 <div class="row clearfix ">
     <div class="col-md-12 column">
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/what-makes-a-good-developer">
-                    <h2 class="post-title">
-                        What Makes a Good Developer
-                    </h2>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on October 15, 2019
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/types-of-locks-in-sql-server">
-                    <h2 class="post-title">
-                        Types of Locks in SQL Server
-                    </h2>
-                        <h3 class="post-subtitle">A Quick Guide to Shared, Exclusive, Update, and Intent Locks</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 27, 2018
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/value-type-vs-reference-type">
-                    <h2 class="post-title">
-                        Value Type vs Reference Type
-                    </h2>
-                        <h3 class="post-subtitle">Understanding memory behavior, data handling, and core differences</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 25, 2018
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/how-to-evaluate-the-quality-of-a-software-team">
-                    <h2 class="post-title">
-                        How to Evaluate the Quality of a Software Team
-                    </h2>
-                        <h3 class="post-subtitle">A simple yet powerful checklist that says a lot more than lines of code</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 16, 2018
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/the-most-important-secret-in-programming">
-                    <h2 class="post-title">
-                        The Most Important Secret in Programming
-                    </h2>
-                        <h3 class="post-subtitle">Why solving the right problem matters more than solving it fast</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on March 02, 2018
-                </p>
-            </div>
-            <hr>
-
-
-<nav aria-label="Pagination controls">
-        <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/6">Prev</a>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-
-                <li class="page-item">
-                    <a class="page-link" href="https://huseyinsekmenoglu.net/articles/page/6">6</a>
-                </li>
-                <li class="page-item">
-                        <strong>
-                    <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/7">7</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="https://huseyinsekmenoglu.net/articles/page/8">8</a>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/8">Next</a>
-                </li>
-        </ul>
-</nav>    </div>
+        <pre><code>public sealed class Logger&#xA;{&#xA;    private static readonly Lazy&lt;Logger&gt; _instance = &#xA;        new Lazy&lt;Logger&gt;(() =&gt; new Logger());&#xA;&#xA;    public static Logger Instance =&gt; _instance.Value;&#xA;&#xA;    private Logger()&#xA;    {&#xA;        // Private constructor to prevent instantiation&#xA;    }&#xA;&#xA;    public void Log(string message)&#xA;    {&#xA;        Console.WriteLine($&quot;Log: {message}&quot;);&#xA;    }&#xA;}&#xA;</code></pre>
+    </div>
 </div>
-</div>
-                </div>
+
+<div class="richtext ">
+    <p>This version uses <code>Lazy&lt;T&gt;</code> to ensure thread safety and lazy initialization without explicit locking mechanisms.</p><hr data-start="1702" data-end="1705"><h2 data-start="1707" data-end="1726">⚖️ Pros and Cons</h2><h3 data-start="1728" data-end="1738">✅ Pros</h3><ul data-start="1740" data-end="1901"><li><p data-start="1742" data-end="1770">Guarantees a single instance</p></li><li><p data-start="1773" data-end="1814">Reduces memory footprint in certain cases</p></li><li><p data-start="1817" data-end="1850">Controlled access to the instance</p></li><li><p data-start="1853" data-end="1901">Can simplify debugging in shared-state scenarios</p></li></ul><h3 data-start="1903" data-end="1913">❌ Cons</h3><ul data-start="1915" data-end="2156"><li><p data-start="1917" data-end="1964">Hinders unit testing due to hidden dependencies</p></li><li><p data-start="1967" data-end="2019">Introduces global state, which can increase coupling</p></li><li><p data-start="2022" data-end="2086">Can become a bottleneck in multithreaded environments if misused</p></li><li><p data-start="2089" data-end="2156">Sometimes leads to anti-pattern if overused or used for convenience</p></li></ul><hr data-start="2158" data-end="2161"><h2 data-start="2163" data-end="2191">🧪 Testing Considerations</h2><p data-start="2193" data-end="2286">Singletons can be challenging to test because of their global nature. To improve testability:</p><ul data-start="2288" data-end="2418"><li><p data-start="2290" data-end="2340">Use dependency injection to abstract the singleton</p></li><li><p data-start="2343" data-end="2370">Use interfaces or factories</p></li><li><p data-start="2373" data-end="2418">Avoid static usage directly in business logic</p></li></ul><hr data-start="2420" data-end="2423"><h2 data-start="2425" data-end="2449">🚫 Anti-Pattern Alert</h2><p data-start="2451" data-end="2595">Using the Singleton Pattern for everything is a common beginner mistake. If you find yourself making many classes into singletons, stop and ask:</p><ul data-start="2597" data-end="2750"><li><p data-start="2599" data-end="2632">Is global state really necessary?</p></li><li><p data-start="2635" data-end="2700">Can dependency injection provide the same benefits more flexibly?</p></li><li><p data-start="2703" data-end="2750">Are you compromising modularity or testability?</p></li></ul><hr data-start="2752" data-end="2755"><h2 data-start="2757" data-end="2792">🧱 Alternatives and Enhancements</h2><ul data-start="2794" data-end="3059"><li><p data-start="2796" data-end="2884"><strong data-start="2796" data-end="2817">Monostate Pattern</strong>: Shares state across instances instead of preventing instantiation</p></li><li><p data-start="2887" data-end="2956"><strong data-start="2887" data-end="2911">Dependency Injection</strong>: Encourages more flexibility and testability</p></li><li><p data-start="2959" data-end="3059"><strong data-start="2959" data-end="2986">Service Locator Pattern</strong>: Can centralize access to services but often considered an anti-pattern</p></li></ul><hr data-start="3061" data-end="3064"><h2 data-start="3066" data-end="3086">📌 Final Thoughts</h2><p data-start="3088" data-end="3365">The Singleton Pattern is simple but powerful. Like all patterns, it is best used with intention and moderation. When used correctly, it can improve performance, consistency and maintainability in your application. Just remember,&nbsp;<strong data-start="3317" data-end="3364">with great power comes great responsibility</strong>.</p>
+</div></div>
             </div>
         </div>
-    </article>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="article-navigation">
+    <ul class="flex justify-between">
+        <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/mastering-software-design-patterns-from-origins-to-modern-architecture" title="Previous Article">
+                    <div class="flex items-center justify-center md:justify-start">
+                        &lt; &nbsp;
+                        <p class="font-primary">
+                            Previous Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black">
+                        Mastering Software Design Patterns: From Origins to Modern Architecture
+                    </h5>
+                </a>
+        </li>
+            <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/demystifying-the-factory-method-pattern" title="Next Article">
+                    <div class="flex items-center flex-row-reverse md:flex-row justify-center md:justify-end">
+                        &nbsp; &gt;
+                        <p class="font-primary">
+                            Next Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black text-right">
+                        Demystifying the Factory Method Pattern
+                    </h5>
+                </a>
+            </li>
+    </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</article>
 
     
 <footer>
