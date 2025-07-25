@@ -11,14 +11,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>How to Stop Your Emails from Going to Spam | Tech Journey</title>
+<title>What Are Microservices? | Tech Journey</title>
 <meta name="Description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
-<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/how-to-stop-your-emails-from-going-to-spam" />
+<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/what-are-microservices" />
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/how-to-stop-your-emails-from-going-to-spam" />
+<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/what-are-microservices" />
 <meta property="og:title" content="" />
 <meta property="og:description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
@@ -114,21 +114,21 @@
     </div>
 </nav>
 
-    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/1ypf3gpy/devops1.jpeg?width=1903&amp;height=628&amp;v=1dbf481458c43d4')">
+    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/jawfygbw/architecture-patterns.webp?width=1903&amp;height=628&amp;v=1dbf58c08cc4c3d')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="post-heading">
-                    <h1>How to Stop Your Emails from Going to Spam</h1>
+                    <h1>What Are Microservices?</h1>
 
-                            <h2 class="subheading mb-4">A step-by-step guide to proper DNS and email authentication setup</h2>
+                            <h2 class="subheading mb-4">Microservices are small, independent services that work together to form a system.</h2>
                         <span class="meta">
                             Posted
-by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;January 11, 2021
+by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;May 23, 2023
                         </span>
                             <span class="mt-4 d-block"></span>
-                                <a href="https://huseyinsekmenoglu.net/categories/devops-deployment" title="DevOps &amp; Deployment" class="badge rounded-pill bg-light text-dark border-dark border-5">
-                                    DevOps &amp; Deployment
+                                <a href="https://huseyinsekmenoglu.net/categories/architecture-patterns" title="Architecture &amp; Patterns" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Architecture &amp; Patterns
                                 </a>
                 </div>
             </div>
@@ -144,7 +144,17 @@ by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;January
 
 
 <div class="richtext ">
-    <p>If you're sending emails and they keep landing in the recipient’s spam folder, there's a good chance your DNS settings are incomplete or incorrect. Before you blame your email service, test your domain setup using <a target="_new" data-router-slot="disabled" class="" data-start="578" data-end="620" href="https://mail-tester.com" rel="noopener" type="external">mail-tester.com</a>. It will show you a score along with a detailed breakdown of what's missing or misconfigured.</p><p data-start="716" data-end="855">Let’s say you own the domain <strong data-start="745" data-end="759">sekmen.dev</strong><br>Your mail server domain is <strong data-start="789" data-end="808">mail.sekmen.dev</strong><br>Your mail server IP address is <strong data-start="842" data-end="853">1.2.3.4</strong></p><p data-start="857" data-end="915">Here’s what you need to do to stay out of the spam folder:</p><hr data-start="917" data-end="920"><h3 data-start="922" data-end="950">📩 1. Set Your MX Record</h3><p data-start="952" data-end="1021">This tells other mail servers where to send messages for your domain.</p><table style="min-width: 75px"><colgroup><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"></colgroup><tbody><tr><th colspan="1" rowspan="1"><p>Type</p></th><th colspan="1" rowspan="1"><p>Name</p></th><th colspan="1" rowspan="1"><p>Content</p></th></tr><tr><td colspan="1" rowspan="1"><p>MX</p></td><td colspan="1" rowspan="1"><p><a target="" data-router-slot="disabled" href="http://sekmen.dev" type="external">sekmen.dev</a></p></td><td colspan="1" rowspan="1"><p><a target="" data-router-slot="disabled" href="http://mail.sekmen.dev" type="external">mail.sekmen.dev</a></p></td></tr></tbody></table><hr data-start="1156" data-end="1159"><h3 data-start="1161" data-end="1209">🌐 2. Define an A Record for the Mail Server</h3><p data-start="1211" data-end="1308">This links your mail subdomain to a fixed IP address. Make sure your mail server has a static IP.</p><table style="min-width: 75px"><colgroup><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"></colgroup><tbody><tr><th colspan="1" rowspan="1"><p>Type</p></th><th colspan="1" rowspan="1"><p>Name</p></th><th colspan="1" rowspan="1"><p>Content</p></th></tr><tr><td colspan="1" rowspan="1"><p>A</p></td><td colspan="1" rowspan="1"><p><a target="" data-router-slot="disabled" href="http://mail.sekmen.dev" type="external">mail.sekmen.dev</a></p></td><td colspan="1" rowspan="1"><p>1.2.3.4</p></td></tr></tbody></table><hr data-start="1431" data-end="1434"><h3 data-start="1436" data-end="1463">🔐 3. Add an SPF Record</h3><p data-start="1465" data-end="1547">This defines which servers are authorized to send emails on behalf of your domain.</p><table style="min-width: 75px"><colgroup><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"></colgroup><tbody><tr><th colspan="1" rowspan="1"><p>Type</p></th><th colspan="1" rowspan="1"><p>Name</p></th><th colspan="1" rowspan="1"><p>Content</p></th></tr><tr><td colspan="1" rowspan="1"><p>TXT</p></td><td colspan="1" rowspan="1"><p><a target="" data-router-slot="disabled" href="http://sekmen.dev" type="external">sekmen.dev</a></p></td><td colspan="1" rowspan="1"><p>"v=spf1 ip4:1.2.3.4 a mx ptr include:<a target="" data-router-slot="disabled" href="http://unluco.com" type="external">unluco.com</a> ~all"</p></td></tr></tbody></table><p>Replace <code>1.2.3.4</code> and <code>include:unluco.com</code> with your actual IP and providers.</p><hr data-start="1917" data-end="1920"><h3 data-start="1922" data-end="1943">✉️ 4. Set Up DKIM</h3><p data-start="1945" data-end="2040">DomainKeys Identified Mail (DKIM) signs your messages to prove they haven't been tampered with.</p><table style="min-width: 75px"><colgroup><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"></colgroup><tbody><tr><th colspan="1" rowspan="1"><p>Type</p></th><th colspan="1" rowspan="1"><p>Name</p></th><th colspan="1" rowspan="1"><p>Content</p></th></tr><tr><td colspan="1" rowspan="1"><p>TXT</p></td><td colspan="1" rowspan="1"><p>dm._domainkey</p></td><td colspan="1" rowspan="1"><p>v=DKIM1; k=rsa; p=YourPublicKeyHere</p></td></tr></tbody></table><p>Generate this with your mail server and DNS provider. The public key is usually a long string.</p><hr data-start="2448" data-end="2451"><h3 data-start="2453" data-end="2479">🛡️ 5. Configure DMARC</h3><p data-start="2481" data-end="2559">This tells receiving servers what to do when messages fail SPF or DKIM checks.</p><table style="min-width: 75px"><colgroup><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"></colgroup><tbody><tr><th colspan="1" rowspan="1"><p>Type</p></th><th colspan="1" rowspan="1"><p>Name</p></th><th colspan="1" rowspan="1"><p>Content</p></th></tr><tr><td colspan="1" rowspan="1"><p>TXT</p></td><td colspan="1" rowspan="1"><p>_dmarc</p></td><td colspan="1" rowspan="1"><p>v=DMARC1; p=quarantine; rua=<a target="" data-router-slot="disabled" href="mailto:admin@sekmen.dev" type="external">mailto:admin@sekmen.dev</a>; pct=100; aspf=r</p></td></tr></tbody></table><p>Start with <code>p=none</code> while testing, then switch to <code>quarantine</code> or <code>reject</code> for full protection.</p><hr data-start="2941" data-end="2944"><h3 data-start="2946" data-end="2993">🔁 Don’t Forget Reverse DNS and PTR Records</h3><p data-start="2995" data-end="3208">Ask your hosting provider or email platform to configure reverse DNS and PTR records for your IP address. These link your IP back to your mail domain and are required for most email providers to trust your server.</p><hr data-start="3210" data-end="3213"><h3 data-start="3215" data-end="3230">✅ Final Tip</h3><p data-start="3232" data-end="3355">Make sure your server authenticates all outgoing mail. Use TLS for encryption and regularly monitor your domain reputation.</p><p data-start="3357" data-end="3558" data-is-last-node="" data-is-only-node="">Once everything is set up correctly, test again using <a target="" data-router-slot="disabled" href="http://mail-tester.com" type="external">mail-tester.com</a> and aim for a score of 9/10 or higher. Proper configuration takes just a few minutes but can save you from endless email headaches.</p>
+    <h1 data-start="164" data-end="192">🧩 What Are Microservices?</h1><p data-start="194" data-end="383"><strong data-start="194" data-end="280">Microservices are small, independent services that work together to form a system.</strong><br>Each one runs its own logic, stores its own data, and can be built, deployed, and scaled on its own.</p><hr data-start="385" data-end="388"><h3 data-start="390" data-end="415">🔍 Why Microservices?</h3><ul data-start="417" data-end="943"><li><p data-start="419" data-end="516">💡 <strong data-start="422" data-end="445">Independent scaling</strong>: Scale only what needs scaling. Stop wasting resources on monoliths.</p></li><li><p data-start="519" data-end="592">🚀 <strong data-start="522" data-end="543">Faster deployment</strong>: Each microservice has its own CI/CD pipeline.</p></li><li><p data-start="595" data-end="669">🧪 <strong data-start="598" data-end="626">More testing flexibility</strong>: Test parts of your system in isolation.</p></li><li><p data-start="672" data-end="741">👥 <strong data-start="675" data-end="692">Smaller teams</strong>: Teams work on different services in parallel.</p></li><li><p data-start="744" data-end="844">🛠 <strong data-start="747" data-end="767">Tech flexibility</strong>: Use the best tool for the job—language, platform, database, or framework.</p></li><li><p data-start="847" data-end="943">🕸 <strong data-start="850" data-end="879">Easier legacy integration</strong>: Wrap old systems inside microservices and evolve at your pace.</p></li></ul><hr data-start="945" data-end="948"><h3 data-start="950" data-end="975">📦 Real-World Example</h3><p data-start="977" data-end="1037">Imagine an <strong data-start="988" data-end="1011">e-commerce platform</strong> built with microservices:</p><table style="min-width: 75px"><colgroup><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"></colgroup><tbody><tr><th colspan="1" rowspan="1"><p>Service</p></th><th colspan="1" rowspan="1"><p>Responsibility</p></th><th colspan="1" rowspan="1"><p>Tech Stack</p></th></tr><tr><td colspan="1" rowspan="1"><p>🛒 Cart Service</p></td><td colspan="1" rowspan="1"><p>Add/remove items</p></td><td colspan="1" rowspan="1"><p>Node.js + Redis</p></td></tr><tr><td colspan="1" rowspan="1"><p>🏷 Product Service</p></td><td colspan="1" rowspan="1"><p>Manage product catalog</p></td><td colspan="1" rowspan="1"><p>Python + PostgreSQL</p></td></tr><tr><td colspan="1" rowspan="1"><p>💳 Payment Service</p></td><td colspan="1" rowspan="1"><p>Handle transactions</p></td><td colspan="1" rowspan="1"><p>Java + Stripe API</p></td></tr><tr><td colspan="1" rowspan="1"><p>📦 Shipping Service</p></td><td colspan="1" rowspan="1"><p>Fulfill and track deliveries</p></td><td colspan="1" rowspan="1"><p>Go + RabbitMQ</p></td></tr><tr><td colspan="1" rowspan="1"><p>👤 Auth Service</p></td><td colspan="1" rowspan="1"><p>Manage login and permissions</p></td><td colspan="1" rowspan="1"><p>.NET + Azure AD</p></td></tr></tbody></table><p data-pm-slice="0 0 []">Each service is deployed independently and communicates via REST or messaging (like RabbitMQ or Azure Service Bus).</p><hr data-start="1756" data-end="1759"><h3 data-start="1761" data-end="1783">📐 Core Principles</h3><p data-start="1785" data-end="1886"><strong data-start="1785" data-end="1814">1. Independence of Design</strong><br>Each service must be isolated in logic and data. No shared databases.</p><p data-start="1888" data-end="1996"><strong data-start="1888" data-end="1917">2. Independent Deployment</strong><br>Services should run anywhere—use containers to bundle code and dependencies.</p><p data-start="1998" data-end="2097"><strong data-start="1998" data-end="2019">3. Loose Coupling</strong><br>Limit dependencies. Prefer asynchronous messaging. Avoid chained API calls.</p><p data-start="2099" data-end="2190"><strong data-start="2099" data-end="2120">4. Data Ownership</strong><br>Each microservice must own its data. Changes are shared via events.</p><p data-start="2192" data-end="2276"><strong data-start="2192" data-end="2210">5. Idempotency</strong><br>Design messages so re-processing them doesn't break the system.</p><hr data-start="2406" data-end="2409"><h3 data-start="2411" data-end="2436">🛡 Resilience Tactics</h3><ul data-start="2438" data-end="2781"><li><p data-start="2440" data-end="2536"><strong data-start="2440" data-end="2465">🔁 Retry with backoff</strong><br>Retry failed requests with increasing delay: 10ms → 20ms → 40ms...</p></li><li><p data-start="2540" data-end="2616"><strong data-start="2540" data-end="2563">🧯 Circuit breakers</strong><br>Stop retrying when a service is clearly failing.</p></li><li><p data-start="2620" data-end="2708"><strong data-start="2620" data-end="2636">🔩 Bulkheads</strong><br>Limit concurrent requests per service to avoid system-wide crashes.</p></li><li><p data-start="2712" data-end="2781"><strong data-start="2712" data-end="2740">📬 Message deduplication</strong><br>Use message IDs and reject duplicates:</p></li></ul><p></p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>if (receivedMessages.has(message.id)) {&#xA;  return; // already processed&#xA;}&#xA;receivedMessages.set(message.id, true);&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <hr data-start="2907" data-end="2910"><p data-start="2912" data-end="3070"><strong data-start="2912" data-end="2960">Microservices are more than a design choice.</strong><br>They’re a strategic advantage that brings <strong data-start="3005" data-end="3044">scalability, flexibility, and speed</strong> to modern software teams.</p>
 </div></div>
             </div>
         </div>
@@ -153,7 +163,7 @@ by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;January
                 <div class="article-navigation">
     <ul class="flex justify-between">
         <li class="article-navigation-item">
-                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/my-2020-year-in-review-from-rescuetime" title="Previous Article">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/code-style-essentials" title="Previous Article">
                     <div class="flex items-center justify-center md:justify-start">
                         &lt; &nbsp;
                         <p class="font-primary">
@@ -161,12 +171,12 @@ by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;January
                         </p>
                     </div>
                     <h5 class="hidden md:block text-lg text-primary mb-1 font-black">
-                        My 2020 Year In Review From RescueTime &#x1F60E;
+                        Code Style Essentials
                     </h5>
                 </a>
         </li>
             <li class="article-navigation-item">
-                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/how-to-create-a-local-ssl-certificate-on-windows" title="Next Article">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/how-to-protect-against-password-cracking-attacks" title="Next Article">
                     <div class="flex items-center flex-row-reverse md:flex-row justify-center md:justify-end">
                         &nbsp; &gt;
                         <p class="font-primary">
@@ -174,7 +184,7 @@ by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;January
                         </p>
                     </div>
                     <h5 class="hidden md:block text-lg text-primary mb-1 font-black text-right">
-                        How to Create a Local SSL Certificate on Windows
+                        How to Protect Against Password Cracking Attacks
                     </h5>
                 </a>
             </li>

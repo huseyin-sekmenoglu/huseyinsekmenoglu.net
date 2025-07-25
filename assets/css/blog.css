@@ -82,3 +82,9 @@ footer svg.blue path {
 footer svg.red path {
     fill: darkred;
 }
+table p {
+    margin: 5px !important;
+}
+table th {
+    border-bottom: 1px solid #dee2e6;
+}
