@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <title>Converting Strings or Integers to Enums in C# | Tech Journey</title>
-<meta name="Description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
+<meta name="Description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
 <link rel="canonical" href="https://huseyinsekmenoglu.net/articles/converting-strings-or-integers-to-enums-in-c" />
@@ -20,13 +20,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huseyinsekmenoglu.net/articles/converting-strings-or-integers-to-enums-in-c" />
 <meta property="og:title" content="" />
-<meta property="og:description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
+<meta property="og:description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
 <meta property="og:image:type" content="image/png">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="">
-<meta name="twitter:description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster.">
+<meta name="twitter:description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster.">
 <meta name="twitter:image" content="https://huseyinsekmenoglu.net/socialimage.png">
 
 <link rel="apple-touch-icon" sizes="57x57" href="https://huseyinsekmenoglu.net/apple-icon-57x57.png">
@@ -144,7 +144,7 @@ by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;Septemb
 
 
 <div class="richtext ">
-    <p>Enums in C# are ideal for representing a fixed set of related constants. However, data often comes from external sources like user input, configuration files, or APIs. In such cases, the values might be in <code>int</code> or <code>string</code> format. To use them as enums, conversion is required.</p><p data-start="593" data-end="659">Here is how to safely convert a string or an integer into an enum.</p><hr data-start="661" data-end="664"><h3 data-start="666" data-end="693">🎯 Define the Enum Type</h3><p data-start="695" data-end="736">Start by defining your enum. For example:</p>
+    <p>Enums in C# are ideal for representing a fixed set of related constants. However, data often comes from external sources like user input, configuration files or APIs. In such cases, the values might be in <code>int</code> or <code>string</code> format. To use them as enums, conversion is required.</p><p data-start="593" data-end="659">Here is how to safely convert a string or an integer into an enum.</p><hr data-start="661" data-end="664"><h3 data-start="666" data-end="693">🎯 Define the Enum Type</h3><p data-start="695" data-end="736">Start by defining your enum. For example:</p>
 </div>
 
 <div class="row clearfix ">
@@ -164,7 +164,7 @@ by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;Septemb
 </div>
 
 <div class="richtext ">
-    <p>This approach is fast, but keep in mind that casting an invalid number does not throw an error. Instead, it returns the numeric value, even if it does not correspond to a defined enum member.</p><p data-start="1249" data-end="1301">You can check validity first using <code>Enum.IsDefined</code>:</p>
+    <p>This approach is fast but keep in mind that casting an invalid number does not throw an error. Instead, it returns the numeric value, even if it does not correspond to a defined enum member.</p><p data-start="1249" data-end="1301">You can check validity first using <code>Enum.IsDefined</code>:</p>
 </div>
 
 <div class="row clearfix ">

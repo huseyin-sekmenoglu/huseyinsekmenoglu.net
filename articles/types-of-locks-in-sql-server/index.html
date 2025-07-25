@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <title>Types of Locks in SQL Server | Tech Journey</title>
-<meta name="Description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
+<meta name="Description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
 <link rel="canonical" href="https://huseyinsekmenoglu.net/articles/types-of-locks-in-sql-server" />
@@ -20,13 +20,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huseyinsekmenoglu.net/articles/types-of-locks-in-sql-server" />
 <meta property="og:title" content="" />
-<meta property="og:description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster." />
+<meta property="og:description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
 <meta property="og:image:type" content="image/png">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="">
-<meta name="twitter:description" content="Explore curated roadmaps, tutorials, and projects for backend, frontend, mobile, DevOps, AI, and more. Tech Journey helps developers learn smarter and grow faster.">
+<meta name="twitter:description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster.">
 <meta name="twitter:image" content="https://huseyinsekmenoglu.net/socialimage.png">
 
 <link rel="apple-touch-icon" sizes="57x57" href="https://huseyinsekmenoglu.net/apple-icon-57x57.png">
@@ -121,7 +121,7 @@
                 <div class="post-heading">
                     <h1>Types of Locks in SQL Server</h1>
 
-                            <h2 class="subheading mb-4">A Quick Guide to Shared, Exclusive, Update, and Intent Locks</h2>
+                            <h2 class="subheading mb-4">A Quick Guide to Shared, Exclusive, Update and Intent Locks</h2>
                         <span class="meta">
                             Posted
 by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;April 27, 2018
@@ -144,7 +144,7 @@ by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;April 2
 
 
 <div class="richtext ">
-    <p>SQL Server uses locks to manage concurrency and ensure data integrity. These locks determine how data is accessed and modified when multiple users or processes interact with the database. Here are the key lock types you need to know:</p><hr data-start="493" data-end="496"><h3 data-start="498" data-end="519">🔗 Shared Locks</h3><p data-start="521" data-end="793">Shared locks are used during <strong data-start="550" data-end="569">read operations</strong>. When a process reads data, SQL Server places a shared lock to prevent any other process from modifying that data while it is being read. Multiple shared locks can exist on the same resource, but they block exclusive locks.</p><hr data-start="795" data-end="798"><h3 data-start="800" data-end="824">🔐 Exclusive Locks</h3><p data-start="826" data-end="1037">Exclusive locks occur during <strong data-start="855" data-end="895">insert, update, or delete operations</strong>. They ensure that no other process can read or write to the data being changed. An exclusive lock is held until the transaction is completed.</p><hr data-start="1039" data-end="1042"><h3 data-start="1044" data-end="1065">🔄 Update Locks</h3><p data-start="1067" data-end="1304">Update locks are used as a <strong data-start="1094" data-end="1139">bridge between shared and exclusive locks</strong>. They are applied when SQL Server is searching for rows to update or delete. Once the target row is identified, the update lock is converted into an exclusive lock.</p><hr data-start="1306" data-end="1309"><h3 data-start="1311" data-end="1332">🧭 Intent Locks</h3><p data-start="1334" data-end="1645">Intent locks are used to indicate a <strong data-start="1370" data-end="1406">lower-level lock is being placed</strong>. For example, if a transaction wants to acquire an exclusive lock on a row, SQL Server will place an intent exclusive lock on the table. This allows SQL Server to coordinate locking at different granularities like rows, pages, and tables.</p>
+    <p>SQL Server uses locks to manage concurrency and ensure data integrity. These locks determine how data is accessed and modified when multiple users or processes interact with the database. Here are the key lock types you need to know:</p><hr data-start="493" data-end="496"><h3 data-start="498" data-end="519">🔗 Shared Locks</h3><p data-start="521" data-end="793">Shared locks are used during <strong data-start="550" data-end="569">read operations</strong>. When a process reads data, SQL Server places a shared lock to prevent any other process from modifying that data while it is being read. Multiple shared locks can exist on the same resource but they block exclusive locks.</p><hr data-start="795" data-end="798"><h3 data-start="800" data-end="824">🔐 Exclusive Locks</h3><p data-start="826" data-end="1037">Exclusive locks occur during <strong data-start="855" data-end="895">insert, update or delete operations</strong>. They ensure that no other process can read or write to the data being changed. An exclusive lock is held until the transaction is completed.</p><hr data-start="1039" data-end="1042"><h3 data-start="1044" data-end="1065">🔄 Update Locks</h3><p data-start="1067" data-end="1304">Update locks are used as a <strong data-start="1094" data-end="1139">bridge between shared and exclusive locks</strong>. They are applied when SQL Server is searching for rows to update or delete. Once the target row is identified, the update lock is converted into an exclusive lock.</p><hr data-start="1306" data-end="1309"><h3 data-start="1311" data-end="1332">🧭 Intent Locks</h3><p data-start="1334" data-end="1645">Intent locks are used to indicate a <strong data-start="1370" data-end="1406">lower-level lock is being placed</strong>. For example, if a transaction wants to acquire an exclusive lock on a row, SQL Server will place an intent exclusive lock on the table. This allows SQL Server to coordinate locking at different granularities like rows, pages and tables.</p>
 </div></div>
             </div>
         </div>
