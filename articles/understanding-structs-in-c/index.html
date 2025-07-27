@@ -11,14 +11,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Articles | Tech Journey</title>
+<title>Understanding Structs in C# | Tech Journey</title>
 <meta name="Description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
-<link rel="canonical" href="https://huseyinsekmenoglu.net/articles" />
+<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/understanding-structs-in-c" />
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huseyinsekmenoglu.net/articles" />
+<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/understanding-structs-in-c" />
 <meta property="og:title" content="" />
 <meta property="og:description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
@@ -110,151 +110,126 @@
     </div>
 </nav>
 
-    
-<header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/35nidypy/programmers-day-take-br.jpg?width=1903&amp;height=628&amp;v=1dbf1a3924a2a5d')">
+    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/uiqb2uvm/programming-fundamentals.webp?width=1903&amp;height=628&amp;v=1dbf5881f20dfb4')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="site-heading">
-                    <h1>Articles</h1>
+                <div class="post-heading">
+                    <h1>Understanding Structs in C#</h1>
 
-                            <span class="subheading">Many blog posts for you</span>
+                            <h2 class="subheading mb-4">A guide to defining immutable value types in C#</h2>
+                        <span class="meta">
+                            Posted
+by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;January 02, 2019
+                        </span>
+                            <span class="mt-4 d-block"></span>
+                                <a href="https://huseyinsekmenoglu.net/categories/programming-fundamentals" title="Programming Fundamentals" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Programming Fundamentals
+                                </a>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="umb-block-list">
 
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="umb-block-list">
+
+<div class="richtext ">
+    <p>Structs in C# provide a lightweight way to define value types. Unlike classes, which are reference types, structs are copied by value, making them useful for scenarios where data integrity is crucial and mutation should be avoided.</p><hr data-start="432" data-end="435"><h2 data-start="437" data-end="460">🔍 What Is a Struct?</h2><p data-start="462" data-end="708">In C# a <code>struct</code> is a value type. This means that when a struct is assigned to a new variable, a copy is made. Built-in types like <code>int</code>, <code>bool</code>&nbsp;and <code>decimal</code> are all structs. However, <code>string</code> and <code>object</code> are reference types, not value types.</p><p data-start="710" data-end="825">You can create custom value types using the <code>struct</code> keyword, following a syntax similar to <code>class</code> or <code>interface</code>.</p>
+</div>
 
 <div class="row clearfix ">
     <div class="col-md-12 column">
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/mastering-software-design-patterns-from-origins-to-modern-architecture">
-                    <h2 class="post-title">
-                        Mastering Software Design Patterns: From Origins to Modern Architecture
-                    </h2>
-                        <h3 class="post-subtitle">A Complete Introduction to Design Patterns, Their History, Types and Impact on Modern Software Engineering</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 12, 2020
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/the-biggest-mistake-a-developer-can-make">
-                    <h2 class="post-title">
-                        The Biggest Mistake a Developer Can Make
-                    </h2>
-                        <h3 class="post-subtitle">Why rewriting software from scratch is usually a terrible idea</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on December 20, 2019
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/what-makes-a-good-developer">
-                    <h2 class="post-title">
-                        What Makes a Good Developer
-                    </h2>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on October 15, 2019
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/understanding-structs-in-c">
-                    <h2 class="post-title">
-                        Understanding Structs in C#
-                    </h2>
-                        <h3 class="post-subtitle">A guide to defining immutable value types in C#</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on January 02, 2019
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/types-of-locks-in-sql-server">
-                    <h2 class="post-title">
-                        Types of Locks in SQL Server
-                    </h2>
-                        <h3 class="post-subtitle">A Quick Guide to Shared, Exclusive, Update and Intent Locks</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 27, 2018
-                </p>
-            </div>
-            <hr>
-
-
-<nav aria-label="Pagination controls">
-        <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <strong>
-                        <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/6">Prev</a>
-                    </strong>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/5">5</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/6">6</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                        <a class="page-link" href="#">7</a>
-                </li>
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/8">8</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/9">9</a>
-                        </strong>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-                <li class="page-item">
-                    <strong>
-                        <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/8">Next</a>
-                    </strong>
-                </li>
-        </ul>
-</nav>    </div>
+        <pre><code>struct Angle&#xA;{&#xA;    public Angle(int degrees, int minutes, int seconds)&#xA;    {&#xA;        Degrees = degrees;&#xA;        Minutes = minutes;&#xA;        Seconds = seconds;&#xA;    }&#xA;&#xA;    public int Degrees { get; }&#xA;    public int Minutes { get; }&#xA;    public int Seconds { get; }&#xA;&#xA;    public Angle Move(int degrees, int minutes, int seconds)&#xA;    {&#xA;        return new Angle(&#xA;            Degrees &#x2B; degrees,&#xA;            Minutes &#x2B; minutes,&#xA;            Seconds &#x2B; seconds&#xA;        );&#xA;    }&#xA;}&#xA;</code></pre>
+    </div>
 </div>
+
+<div class="richtext ">
+    <p>The <code>Angle</code> struct above is immutable: all its properties are read-only.</p><hr data-start="1382" data-end="1385"><h2 data-start="1387" data-end="1416">🔒 Immutability in Structs</h2><p data-start="1418" data-end="1594">C# 6.0 introduced read-only auto-properties, simplifying immutable type creation. C# 7.2 added the <code>readonly struct</code> declaration, allowing the compiler to enforce immutability.</p>
 </div>
-                </div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>readonly struct Angle&#xA;{&#xA;    // compiler checks immutability&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>🔹 <strong data-start="1676" data-end="1715">Why prefer immutability in structs?</strong></p><ul data-start="1716" data-end="1940"><li><p data-start="1718" data-end="1793"><strong data-start="1718" data-end="1737">Predictability:</strong> Value types should represent values that do not change.</p></li><li><p data-start="1796" data-end="1871"><strong data-start="1796" data-end="1808">Clarity:</strong> Because structs are copied, mutating one won't affect another.</p></li><li><p data-start="1874" data-end="1940"><strong data-start="1874" data-end="1885">Safety:</strong> Avoids hard-to-find bugs caused by unexpected changes.</p></li></ul><hr data-start="1942" data-end="1945"><h2 data-start="1947" data-end="1975">📏 Guidelines for Structs</h2><ul data-start="1977" data-end="2293"><li><p data-start="1979" data-end="2011">✅ <strong data-start="1981" data-end="1987">DO</strong> make structs immutable.</p></li><li><p data-start="2014" data-end="2078">✅ <strong data-start="2016" data-end="2022">DO</strong> define methods like <code>Move()</code> that return new instances.</p></li><li><p data-start="2081" data-end="2115">✅ <strong data-start="2083" data-end="2089">DO</strong> avoid setters in structs.</p></li><li><p data-start="2118" data-end="2171">✅ <strong data-start="2120" data-end="2126">DO</strong> favor auto-implemented read-only properties.</p></li><li><p data-start="2174" data-end="2240">❌ <strong data-start="2176" data-end="2185">DON'T</strong> define a parameterless constructor (C# generates one).</p></li><li><p data-start="2243" data-end="2293">❌ <strong data-start="2245" data-end="2254">DON'T</strong> use field initializers inside structs.</p></li></ul><hr data-start="2295" data-end="2298"><h2 data-start="2300" data-end="2327">🛠️ Initializing Structs</h2><p data-start="2329" data-end="2478">Unlike classes, structs can't have field initializers and every constructor must initialize all fields. Here's an example that <strong data-start="2457" data-end="2477">does not compile</strong>:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>struct Angle&#xA;{&#xA;    // &#x274C; Not allowed in structs&#xA;    // int _Degrees = 42;&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>And an example that compiles:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>struct Angle&#xA;{&#xA;    public Angle(int degrees, int minutes, int seconds)&#xA;    {&#xA;        _Degrees = degrees;&#xA;        _Minutes = minutes;&#xA;        _Seconds = seconds;&#xA;    }&#xA;&#xA;    public int Degrees { get { return _Degrees; } }&#xA;    private readonly int _Degrees;&#xA;&#xA;    public int Minutes { get { return _Minutes; } }&#xA;    private readonly int _Minutes;&#xA;&#xA;    public int Seconds { get { return _Seconds; } }&#xA;    private readonly int _Seconds;&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>⛔ Using <code>this</code> before initializing all fields leads to a compile error. Always initialize fields <strong data-start="3146" data-end="3156">before</strong> using properties or methods that reference them.</p><hr data-start="3207" data-end="3210"><h2 data-start="3212" data-end="3233">📌 Important Notes</h2><ul data-start="3235" data-end="3466"><li><p data-start="3237" data-end="3310">The default value of a struct is always the zeroed version of its fields.</p></li><li><p data-start="3313" data-end="3371">Structs may contain methods, constructors and properties.</p></li><li><p data-start="3374" data-end="3466">When using arrays or classes that include structs, C# initializes them using default values.</p></li></ul><hr data-start="3468" data-end="3471"><h2 data-start="3473" data-end="3500">✅ Best Practices Summary</h2><table style="min-width: 50px"><colgroup><col style="min-width: 25px"><col style="min-width: 25px"></colgroup><tbody><tr><th colspan="1" rowspan="1"><p>Do</p></th><th colspan="1" rowspan="1"><p>Don't</p></th></tr><tr><td colspan="1" rowspan="1"><p>Create immutable structs</p></td><td colspan="1" rowspan="1"><p>Use field initializers</p></td></tr><tr><td colspan="1" rowspan="1"><p>Use auto-implemented read-only properties (C# 6.0+)</p></td><td colspan="1" rowspan="1"><p>Define custom parameterless constructors</p></td></tr><tr><td colspan="1" rowspan="1"><p>Ensure constructors fully initialize fields</p></td><td colspan="1" rowspan="1"><p>Use <code>this</code> before full initialization</p></td></tr><tr><td colspan="1" rowspan="1"><p>Prefer value semantics over reference semantics</p></td><td colspan="1" rowspan="1"><p>Assume shared behavior like classes</p></td></tr></tbody></table><hr data-start="4165" data-end="4168"><h2 data-start="4170" data-end="4200">🌐 Real-World Usage Example</h2><p></p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>class Coordinate&#xA;{&#xA;    public Angle Longitude { get; set; }&#xA;    public Angle Latitude { get; set; }&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>If <code>Angle</code> were a class, changes in one instance would affect all references. As a struct, each <code>Coordinate</code> has its own independent copy of <code>Angle</code>.</p>
+</div></div>
             </div>
         </div>
-    </article>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="article-navigation">
+    <ul class="flex justify-between">
+        <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/types-of-locks-in-sql-server" title="Previous Article">
+                    <div class="flex items-center justify-center md:justify-start">
+                        &lt; &nbsp;
+                        <p class="font-primary">
+                            Previous Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black">
+                        Types of Locks in SQL Server
+                    </h5>
+                </a>
+        </li>
+            <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/what-makes-a-good-developer" title="Next Article">
+                    <div class="flex items-center flex-row-reverse md:flex-row justify-center md:justify-end">
+                        &nbsp; &gt;
+                        <p class="font-primary">
+                            Next Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black text-right">
+                        What Makes a Good Developer
+                    </h5>
+                </a>
+            </li>
+    </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</article>
 
     
 <footer>
