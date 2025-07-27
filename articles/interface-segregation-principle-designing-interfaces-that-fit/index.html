@@ -11,14 +11,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Articles | Tech Journey</title>
+<title>Interface Segregation Principle: Designing Interfaces That Fit | Tech Journey</title>
 <meta name="Description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
-<link rel="canonical" href="https://huseyinsekmenoglu.net/articles" />
+<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/interface-segregation-principle-designing-interfaces-that-fit" />
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huseyinsekmenoglu.net/articles" />
+<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/interface-segregation-principle-designing-interfaces-that-fit" />
 <meta property="og:title" content="" />
 <meta property="og:description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
@@ -110,152 +110,116 @@
     </div>
 </nav>
 
-    
-<header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/35nidypy/programmers-day-take-br.jpg?width=1903&amp;height=628&amp;v=1dbf1a3924a2a5d')">
+    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/uivpiyjj/class-concepts-object-oriented-programming.webp?width=1903&amp;height=628&amp;v=1dbf58a84bf1467')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="site-heading">
-                    <h1>Articles</h1>
+                <div class="post-heading">
+                    <h1>Interface Segregation Principle: Designing Interfaces That Fit</h1>
 
-                            <span class="subheading">Many blog posts for you</span>
+                            <h2 class="subheading mb-4">Why smaller and focused interfaces lead to more maintainable code</h2>
+                        <span class="meta">
+                            Posted
+by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;September 01, 2018
+                        </span>
+                            <span class="mt-4 d-block"></span>
+                                <a href="https://huseyinsekmenoglu.net/categories/object-oriented-programming-oop" title="Object-Oriented Programming (OOP)" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Object-Oriented Programming (OOP)
+                                </a>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="umb-block-list">
 
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="umb-block-list">
+
+<div class="richtext ">
+    <h2 data-start="256" data-end="306">🧩 What is the Interface Segregation Principle?</h2><p data-start="308" data-end="614">The Interface Segregation Principle (ISP) is one of the five SOLID principles of object-oriented programming. It helps developers avoid creating bloated interfaces that force classes to implement unnecessary members. ISP encourages the use of multiple, smaller interfaces tailored to specific client needs.</p><p data-start="616" data-end="708">It aligns with the idea that no class should be forced to depend on methods it does not use.</p><hr data-start="710" data-end="713"><h2 data-start="715" data-end="750">🧱 A Misguided Interface Example</h2><p data-start="752" data-end="846">Imagine you are building an e-commerce platform. You define an <code>IProduct</code> interface like this:</p>
+</div>
 
 <div class="row clearfix ">
     <div class="col-md-12 column">
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/types-of-locks-in-sql-server">
-                    <h2 class="post-title">
-                        Types of Locks in SQL Server
-                    </h2>
-                        <h3 class="post-subtitle">A Quick Guide to Shared, Exclusive, Update and Intent Locks</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 27, 2018
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/value-type-vs-reference-type">
-                    <h2 class="post-title">
-                        Value Type vs Reference Type
-                    </h2>
-                        <h3 class="post-subtitle">Understanding memory behaviour, data handling and core differences</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 25, 2018
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/how-to-evaluate-the-quality-of-a-software-team">
-                    <h2 class="post-title">
-                        How to Evaluate the Quality of a Software Team
-                    </h2>
-                        <h3 class="post-subtitle">A simple yet powerful checklist that says a lot more than lines of code</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 16, 2018
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/the-most-important-secret-in-programming">
-                    <h2 class="post-title">
-                        The Most Important Secret in Programming
-                    </h2>
-                        <h3 class="post-subtitle">Why solving the right problem matters more than solving it fast</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on March 02, 2018
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/why-wordpress-can-be-so-frustrating">
-                    <h2 class="post-title">
-                        Why WordPress Can Be So Frustrating
-                    </h2>
-                        <h3 class="post-subtitle">Even the world&#x2019;s most popular CMS can give you a headache if you&#x27;re not prepared</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on August 09, 2017
-                </p>
-            </div>
-            <hr>
-
-
-<nav aria-label="Pagination controls">
-        <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <strong>
-                        <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/8">Prev</a>
-                    </strong>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/7">7</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/8">8</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                        <a class="page-link" href="#">9</a>
-                </li>
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/10">10</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/11">11</a>
-                        </strong>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-                <li class="page-item">
-                    <strong>
-                        <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/10">Next</a>
-                    </strong>
-                </li>
-        </ul>
-</nav>    </div>
+        <pre><code>public interface IProduct&#xA;{&#xA;    string Title { get; }&#xA;    decimal Price { get; }&#xA;    int Width { get; }&#xA;    int Height { get; }&#xA;}&#xA;</code></pre>
+    </div>
 </div>
+
+<div class="richtext ">
+    <p>Now consider two implementations:</p>
 </div>
-                </div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>public class Television : IProduct&#xA;{&#xA;    public string Title { get; set; }&#xA;    public decimal Price { get; set; }&#xA;    public int Width { get; set; }&#xA;    public int Height { get; set; }&#xA;}&#xA;&#xA;public class OnlineBook : IProduct&#xA;{&#xA;    public string Title { get; set; }&#xA;    public decimal Price { get; set; }&#xA;    &#xA;    // These make no sense for an online book&#xA;    public int Width { get; set; }&#xA;    public int Height { get; set; }&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>This design forces the <code>OnlineBook</code> class to implement properties that have no relevance to it. These unrelated members clutter the code and could lead to confusion or even bugs.</p><hr data-start="1649" data-end="1652"><h2 data-start="1654" data-end="1679">✅ Refactoring With ISP</h2><p data-start="1681" data-end="1802">To fix this, apply the Interface Segregation Principle by splitting the <code>IProduct</code> interface into more focused contracts:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>public interface IProduct&#xA;{&#xA;    string Title { get; }&#xA;    decimal Price { get; }&#xA;}&#xA;&#xA;public interface IPhysicalProduct&#xA;{&#xA;    int Width { get; }&#xA;    int Height { get; }&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>Now each class implements only what it needs:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>public class Television : IProduct, IPhysicalProduct&#xA;{&#xA;    public string Title { get; set; }&#xA;    public decimal Price { get; set; }&#xA;    public int Width { get; set; }&#xA;    public int Height { get; set; }&#xA;}&#xA;&#xA;public class OnlineBook : IProduct&#xA;{&#xA;    public string Title { get; set; }&#xA;    public decimal Price { get; set; }&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>This makes the code cleaner and more accurate to the real-world objects being modeled.</p><hr data-start="2460" data-end="2463"><h2 data-start="2465" data-end="2484">🧠 Key Takeaways</h2><ul data-start="2486" data-end="2748"><li><p data-start="2488" data-end="2551">Avoid forcing classes to implement unused methods or properties</p></li><li><p data-start="2554" data-end="2618">Favor small, specific interfaces over large general-purpose ones</p></li><li><p data-start="2621" data-end="2686">ISP leads to better separation of concerns and easier maintenance</p></li><li><p data-start="2689" data-end="2748">Clean interface design supports flexibility and scalability</p></li></ul><hr data-start="2750" data-end="2753"><h2 data-start="2755" data-end="2768">📌 Summary</h2><p data-start="2770" data-end="3034">The Interface Segregation Principle is about respecting the boundaries of what a class should know or care about. It keeps your code modular and focused. When applied consistently, it reduces tight coupling and enhances the clarity and adaptability of your system.</p>
+</div></div>
             </div>
         </div>
-    </article>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="article-navigation">
+    <ul class="flex justify-between">
+        <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/understanding-the-liskov-substitution-principle-through-real-inheritance-issues" title="Previous Article">
+                    <div class="flex items-center justify-center md:justify-start">
+                        &lt; &nbsp;
+                        <p class="font-primary">
+                            Previous Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black">
+                        Understanding the Liskov Substitution Principle Through Real Inheritance Issues
+                    </h5>
+                </a>
+        </li>
+            <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/dependency-inversion-principle-decouple-to-gain-control" title="Next Article">
+                    <div class="flex items-center flex-row-reverse md:flex-row justify-center md:justify-end">
+                        &nbsp; &gt;
+                        <p class="font-primary">
+                            Next Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black text-right">
+                        Dependency Inversion Principle: Decouple to Gain Control
+                    </h5>
+                </a>
+            </li>
+    </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</article>
 
     
 <footer>
