@@ -11,14 +11,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Articles | Tech Journey</title>
+<title>Protecting the Backoffice: Domain-Based Access Restriction in Umbraco | Tech Journey</title>
 <meta name="Description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
-<link rel="canonical" href="https://huseyinsekmenoglu.net/articles" />
+<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/protecting-the-backoffice-domain-based-access-restriction-in-umbraco" />
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huseyinsekmenoglu.net/articles" />
+<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/protecting-the-backoffice-domain-based-access-restriction-in-umbraco" />
 <meta property="og:title" content="" />
 <meta property="og:description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
@@ -110,152 +110,129 @@
     </div>
 </nav>
 
-    
-<header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/35nidypy/programmers-day-take-br.jpg?width=1903&amp;height=628&amp;v=1dbf1a3924a2a5d')">
+    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/5erf5jzq/backend-c-sharp.png?width=1903&amp;height=628&amp;v=1dbf58a2771d9bd')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="site-heading">
-                    <h1>Articles</h1>
+                <div class="post-heading">
+                    <h1>Protecting the Backoffice: Domain-Based Access Restriction in Umbraco</h1>
 
-                            <span class="subheading">Many blog posts for you</span>
+                            <h2 class="subheading mb-4">Implementing custom middleware to restrict unauthorized domain access in ASP.NET Core with Umbraco</h2>
+                        <span class="meta">
+                            Posted
+by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;October 10, 2024
+                        </span>
+                            <span class="mt-4 d-block"></span>
+                                <a href="https://huseyinsekmenoglu.net/categories/backend-development" title="Backend Development" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Backend Development
+                                </a>
+                                <a href="https://huseyinsekmenoglu.net/categories/umbraco" title="Umbraco" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Umbraco
+                                </a>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="umb-block-list">
 
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="umb-block-list">
+
+<div class="richtext ">
+    <p>Securing the backoffice of a content management system is crucial for maintaining integrity and preventing unauthorized access. In the case of Umbraco, which runs on ASP.NET Core, one effective way to do this is by restricting access to the backoffice URL based on the request’s host domain. This article explores a clean and extensible approach using custom middleware and configuration.</p><blockquote><p>TLDR: Package link:&nbsp;<a target="_blank" data-router-slot="disabled" href="https://marketplace.umbraco.com/package/umbraco.community.domainrestriction" title="https://marketplace.umbraco.com/package/umbraco.community.domainrestriction" type="external">https://marketplace.umbraco.com/package/umbraco.community.domainrestriction</a></p></blockquote><hr data-start="673" data-end="676"><h2 data-start="678" data-end="712">⚙️ What Problem Are We Solving?</h2><p data-start="714" data-end="962">The Umbraco backoffice is accessible by default from any valid request hitting the <code>/umbraco</code> path. This can be problematic in scenarios where the environment has multiple domains or where strict domain rules are required for administrative access.</p><p data-start="964" data-end="1201">To solve this, we implement a middleware that intercepts requests to <code>/umbraco</code>, checks whether the request originates from an authorized domain and either allows the request or blocks it with a <code>404 Not Found</code> response or a redirection.</p><hr data-start="1203" data-end="1206"><h2 data-start="1208" data-end="1245">🧱 Core Components of the Solution</h2><p data-start="1247" data-end="1289">Our solution consists of three main parts:</p><ul data-start="1291" data-end="1419"><li><p data-start="1293" data-end="1353">Middleware for intercepting and validating incoming requests</p></li><li><p data-start="1356" data-end="1384">Configuration settings class</p></li><li><p data-start="1387" data-end="1419">Extension methods for easy setup</p></li></ul><p data-start="1421" data-end="1450">Let’s explore each in detail.</p><hr data-start="1452" data-end="1455"><h2 data-start="1457" data-end="1482">🧩 Configuration Class</h2><p data-start="1484" data-end="1688">The <code>DomainRestrictionSettings</code> class is designed to be bound from the <code>appsettings.json</code> file. It includes keys for enabling the feature, setting the authorized domain and defining a custom redirect URL:</p>
+</div>
 
 <div class="row clearfix ">
     <div class="col-md-12 column">
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/handling-chunked-and-resumable-file-uploads-in-asp-net">
-                    <h2 class="post-title">
-                        Handling Chunked and Resumable File Uploads in ASP.NET
-                    </h2>
-                        <h3 class="post-subtitle">Build scalable and user-friendly upload workflows for large files</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on March 19, 2022
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/securing-and-managing-file-downloads-in-asp-net">
-                    <h2 class="post-title">
-                        Securing and Managing File Downloads in ASP.NET
-                    </h2>
-                        <h3 class="post-subtitle">Protect your file endpoints with access control, validation and logging</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on February 05, 2022
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/implementing-resumable-downloads-and-throttling-in-asp-net">
-                    <h2 class="post-title">
-                        Implementing Resumable Downloads and Throttling in ASP.NET
-                    </h2>
-                        <h3 class="post-subtitle">Deliver large files reliably by supporting partial downloads and controlling bandwidth</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on January 24, 2022
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/stay-in-sync-with-the-observer-pattern">
-                    <h2 class="post-title">
-                        Stay in Sync with the Observer Pattern
-                    </h2>
-                        <h3 class="post-subtitle">Keep objects updated without tight coupling</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on July 08, 2021
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/achieving-security-by-design">
-                    <h2 class="post-title">
-                        Achieving Security by Design
-                    </h2>
-                        <h3 class="post-subtitle">Build safer applications by making security a fundamental part of architecture</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on May 24, 2021
-                </p>
-            </div>
-            <hr>
-
-
-<nav aria-label="Pagination controls">
-        <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <strong>
-                        <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/5">Prev</a>
-                    </strong>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/4">4</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/5">5</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                        <a class="page-link" href="#">6</a>
-                </li>
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/7">7</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/8">8</a>
-                        </strong>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-                <li class="page-item">
-                    <strong>
-                        <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/7">Next</a>
-                    </strong>
-                </li>
-        </ul>
-</nav>    </div>
+        <pre><code>public class DomainRestrictionSettings&#xA;{&#xA;&#x9;public const string SectionName = &quot;DomainRestriction&quot;;&#xA;&#x9;public bool Enabled { get; init; } = false;&#xA;&#x9;public string UmbracoPath { get; init; } = &quot;/umbraco&quot;;&#xA;&#x9;public string UmbracoDomain { get; init; } = string.Empty;&#xA;&#x9;public string RedirectUrl { get; init; } = string.Empty;&#xA;}&#xA;</code></pre>
+    </div>
 </div>
+
+<div class="richtext ">
+    <p>This class provides a strongly typed representation of the settings and supports validation through data annotations.</p><hr data-start="2142" data-end="2145"><h2 data-start="2147" data-end="2176">🚦 Custom Middleware Logic</h2><p data-start="2178" data-end="2261">The middleware inspects each request and performs logic based on the configuration:</p>
 </div>
-                </div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>public class DomainRestrictionMiddleware(&#xA;&#x9;RequestDelegate next,&#xA;&#x9;DomainRestrictionConfigService domainRestrictionConfigService&#xA;)&#xA;{&#xA;&#x9;public async Task Invoke(HttpContext context)&#xA;&#x9;{&#xA;&#x9;&#x9;var isEnabled = domainRestrictionConfigService.Settings.Enabled;&#xA;&#x9;&#x9;var umbracoDomain = domainRestrictionConfigService.Settings.UmbracoDomain;&#xA;&#x9;&#x9;var umbracoPath = domainRestrictionConfigService.Settings.UmbracoPath.TrimStart(&#x27;~&#x27;);&#xA;&#x9;&#x9;var requestedPath = context.Request.Path.ToString();&#xA;&#x9;&#x9;var requestedHost = context.Request.Host.ToString();&#xA;&#xA;&#x9;&#x9;if (!isEnabled || string.IsNullOrWhiteSpace(umbracoDomain) || string.IsNullOrWhiteSpace(umbracoPath))&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;await next.Invoke(context);&#xA;&#x9;&#x9;&#x9;return;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;if (requestedPath.InvariantContains(umbracoPath) &amp;&amp; !requestedHost.InvariantContains(umbracoDomain))&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;context.Response.StatusCode = (int)HttpStatusCode.NotFound;&#xA;&#x9;&#x9;&#x9;if (!string.IsNullOrWhiteSpace(domainRestrictionConfigService.Settings.RedirectUrl))&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;context.Response.Redirect(domainRestrictionConfigService.Settings.RedirectUrl);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;await next.Invoke(context);&#xA;&#x9;}&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>The middleware gracefully continues the pipeline if the settings are disabled or invalid. Otherwise, it applies domain checks before proceeding.</p><hr data-start="3496" data-end="3499"><h2 data-start="3501" data-end="3534">🧰 Extension Methods for Setup</h2><p data-start="3536" data-end="3602">To integrate the feature cleanly, we define two extension methods:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>public static class BuilderExtensions&#xA;{&#xA;&#x9;public static IApplicationBuilder UseDomainRestriction(this IApplicationBuilder builder)&#xA;&#x9;{&#xA;&#x9;&#x9;return builder.UseMiddleware&lt;DomainRestrictionMiddleware&gt;();&#xA;&#x9;}&#xA;&#xA;&#x9;public static IUmbracoBuilder AddDomainRestrictionConfigs(this IUmbracoBuilder builder, Action&lt;DomainRestrictionSettings&gt; defaultOptions = default)&#xA;&#x9;{&#xA;&#x9;&#x9;if (builder.Services.FirstOrDefault(x =&gt; x.ServiceType == typeof(DomainRestrictionConfigService)) != null)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return builder;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;var configSection = builder.Config.GetSection(DomainRestrictionSettings.SectionName);&#xA;&#xA;&#x9;&#x9;var options = builder.Services.AddOptions&lt;DomainRestrictionSettings&gt;()&#xA;&#x9;&#x9;&#x9;.Bind(configSection);&#xA;&#xA;&#x9;&#x9;if (defaultOptions != default)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;options.Configure(defaultOptions);&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;options.ValidateDataAnnotations();&#xA;&#xA;&#x9;&#x9;builder.Services.AddSingleton&lt;DomainRestrictionConfigService&gt;();&#xA;&#xA;&#x9;&#x9;return builder;&#xA;&#x9;}&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>This makes integration into the Startup pipeline seamless and maintainable.</p><hr data-start="4582" data-end="4585"><h2 data-start="4587" data-end="4633">🧪 Sample Configuration in appsettings.json</h2><p data-start="4635" data-end="4673">Here is how the settings can be added:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>&quot;DomainRestriction&quot;: {&#xA;  &quot;Enabled&quot;: true,&#xA;  &quot;UmbracoPath&quot;: &quot;/umbraco&quot;,&#xA;  &quot;UmbracoDomain&quot;: &quot;admin.example.com&quot;,&#xA;  &quot;RedirectUrl&quot;: &quot;https://www.example.com/not-authorized&quot;&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <hr data-start="4859" data-end="4862"><h2 data-start="4864" data-end="4886">🧩 Usage in Startup</h2><p data-start="4888" data-end="4932">Finally, wire everything up in <code>Startup.cs</code>:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>builder.AddDomainRestrictionConfigs();&#xA;app.UseDomainRestriction();&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>This ensures that the domain restriction check is applied globally to all incoming requests.</p><hr data-start="5110" data-end="5113"><h2 data-start="5115" data-end="5130">✅ Conclusion</h2><p data-start="5132" data-end="5388">By combining configuration-driven logic with ASP.NET Core middleware, we have implemented a safe and scalable way to restrict access to the Umbraco backoffice. This pattern can easily be extended or reused for other paths or domain-based security features.</p><p data-start="5390" data-end="5500">Use this approach in multi-tenant or production environments where domain-specific access control is required.</p>
+</div></div>
             </div>
         </div>
-    </article>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="article-navigation">
+    <ul class="flex justify-between">
+        <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/7-steps-to-avoid-the-worst-day-of-your-career" title="Previous Article">
+                    <div class="flex items-center justify-center md:justify-start">
+                        &lt; &nbsp;
+                        <p class="font-primary">
+                            Previous Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black">
+                        7 Steps to Avoid the Worst Day of Your Career
+                    </h5>
+                </a>
+        </li>
+            <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/secure-and-professional-offboarding-in-tech-teams" title="Next Article">
+                    <div class="flex items-center flex-row-reverse md:flex-row justify-center md:justify-end">
+                        &nbsp; &gt;
+                        <p class="font-primary">
+                            Next Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black text-right">
+                        Secure and Professional Offboarding in Tech Teams
+                    </h5>
+                </a>
+            </li>
+    </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</article>
 
     
 <footer>
