@@ -11,14 +11,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Articles | Tech Journey</title>
+<title>Securing and Managing File Downloads in ASP.NET | Tech Journey</title>
 <meta name="Description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
-<link rel="canonical" href="https://huseyinsekmenoglu.net/articles" />
+<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/securing-and-managing-file-downloads-in-asp-net" />
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huseyinsekmenoglu.net/articles" />
+<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/securing-and-managing-file-downloads-in-asp-net" />
 <meta property="og:title" content="" />
 <meta property="og:description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
@@ -110,152 +110,136 @@
     </div>
 </nav>
 
-    
-<header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/35nidypy/programmers-day-take-br.jpg?width=1903&amp;height=628&amp;v=1dbf1a3924a2a5d')">
+    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/5erf5jzq/backend-c-sharp.png?width=1903&amp;height=628&amp;v=1dbf58a2771d9bd')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="site-heading">
-                    <h1>Articles</h1>
+                <div class="post-heading">
+                    <h1>Securing and Managing File Downloads in ASP.NET</h1>
 
-                            <span class="subheading">Many blog posts for you</span>
+                            <h2 class="subheading mb-4">Protect your file endpoints with access control, validation and logging</h2>
+                        <span class="meta">
+                            Posted
+by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;February 05, 2022
+                        </span>
+                            <span class="mt-4 d-block"></span>
+                                <a href="https://huseyinsekmenoglu.net/categories/backend-development" title="Backend Development" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Backend Development
+                                </a>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="umb-block-list">
 
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="umb-block-list">
+
+<div class="richtext ">
+    <p data-start="301" data-end="633">Exposing file download functionality in a web application can be a security risk if not implemented properly. Malicious users can attempt to access unauthorized files or exploit poorly validated routes. In this article you will learn how to prevent such scenarios by applying secure patterns to your ASP.NET file download endpoints.</p><hr data-start="635" data-end="638"><h2 data-start="640" data-end="695">🛑 Why You Should Not Serve Files Directly From Disk</h2><p data-start="697" data-end="805">Serving files directly from a public directory using static file middleware is fast but it comes with risks:</p><ul data-start="807" data-end="961"><li><p data-start="809" data-end="857">You cannot apply access control per user or role</p></li><li><p data-start="860" data-end="895">You cannot log or monitor downloads</p></li><li><p data-start="898" data-end="961">Malicious users may guess file paths and access sensitive files</p></li></ul><p data-start="963" data-end="1021">Instead you should deliver files via controlled endpoints.</p><hr data-start="1023" data-end="1026"><h2 data-start="1028" data-end="1073">🛡️ Apply Authentication and Authorization</h2><p data-start="1075" data-end="1151">Always use <code>[Authorize]</code> on your file controller or action to require login:</p>
+</div>
 
 <div class="row clearfix ">
     <div class="col-md-12 column">
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/error-handling-patterns-in-javascript">
-                    <h2 class="post-title">
-                        Error Handling Patterns in JavaScript
-                    </h2>
-                        <h3 class="post-subtitle">Improve application stability with proven approaches to managing runtime errors</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on April 18, 2019
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/how-to-make-http-requests-in-javascript">
-                    <h2 class="post-title">
-                        How to Make HTTP Requests in JavaScript
-                    </h2>
-                        <h3 class="post-subtitle">Learn how to send and handle HTTP requests using native features and popular libraries</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on March 05, 2019
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/solving-the-maximum-request-length-exceeded-error-in-asp-net">
-                    <h2 class="post-title">
-                        Solving the &quot;Maximum Request Length Exceeded&quot; Error in ASP.NET
-                    </h2>
-                        <h3 class="post-subtitle">Learn how to resolve this common issue when uploading large files to your web application</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on February 19, 2019
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/understanding-structs-in-c">
-                    <h2 class="post-title">
-                        Understanding Structs in C#
-                    </h2>
-                        <h3 class="post-subtitle">A guide to defining immutable value types in C#</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on January 02, 2019
-                </p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="https://huseyinsekmenoglu.net/articles/dependency-inversion-principle-decouple-to-gain-control">
-                    <h2 class="post-title">
-                        Dependency Inversion Principle: Decouple to Gain Control
-                    </h2>
-                        <h3 class="post-subtitle">How to make high-level code independent from low-level details</h3>
-                </a>
-                <p class="post-meta ">
-                    Posted
-                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                    on October 09, 2018
-                </p>
-            </div>
-            <hr>
-
-
-<nav aria-label="Pagination controls">
-        <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <strong>
-                        <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/8">Prev</a>
-                    </strong>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/7">7</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/8">8</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                        <a class="page-link" href="#">9</a>
-                </li>
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/10">10</a>
-                        </strong>
-                </li>
-                <li class="page-item">
-                        <strong>
-                            <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/11">11</a>
-                        </strong>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                </li>
-                <li class="page-item">
-                    <strong>
-                        <a class="page-link text-primary" href="https://huseyinsekmenoglu.net/articles/page/10">Next</a>
-                    </strong>
-                </li>
-        </ul>
-</nav>    </div>
+        <pre><code>[Authorize]&#xA;public class FileController : Controller&#xA;{&#xA;    public async Task&lt;IActionResult&gt; Download(string fileName)&#xA;    {&#xA;        ...&#xA;    }&#xA;}&#xA;</code></pre>
+    </div>
 </div>
+
+<div class="richtext ">
+    <p>You can also restrict access to specific roles or policies:</p>
 </div>
-                </div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>[Authorize(Roles = &quot;Admin,PremiumUser&quot;)]&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>This ensures only permitted users can access certain files.</p><hr data-start="1490" data-end="1493"><h2 data-start="1495" data-end="1535">🔐 Validate File Paths and File Names</h2><p data-start="1537" data-end="1655">Never trust user-supplied file names. Malicious users may attempt path traversal using values like <code>../../secret.txt</code>.</p><p data-start="1657" data-end="1752">Use <code>Path.GetFileName()</code> to sanitize input and validate against a whitelist or known directory:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>var safeFileName = Path.GetFileName(fileName);&#xA;var fullPath = Path.Combine(_env.ContentRootPath, &quot;downloads&quot;, safeFileName);&#xA;&#xA;if (!System.IO.File.Exists(fullPath))&#xA;    return NotFound();&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>You can also keep a record in the database and serve only known files.</p><hr data-start="2028" data-end="2031"><h2 data-start="2033" data-end="2080">📄 Set Safe Content Types and Download Names</h2><p data-start="2082" data-end="2156">Make sure to set correct <code>Content-Type</code> and <code>Content-Disposition</code> headers:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>var fileBytes = await System.IO.File.ReadAllBytesAsync(fullPath);&#xA;return File(fileBytes, &quot;application/octet-stream&quot;, safeFileName);&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>This prevents inline execution or browser rendering of sensitive files.</p><hr data-start="2378" data-end="2381"><h2 data-start="2383" data-end="2424">📋 Add Logging and Download Monitoring</h2><p data-start="2426" data-end="2485">Log download events for auditing or analytics. For example:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>_logger.LogInformation(&quot;User {User} downloaded {File}&quot;, User.Identity.Name, safeFileName);&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>You can also log IP addresses or timestamps and store them in a database for download tracking.</p><hr data-start="2690" data-end="2693"><h2 data-start="2695" data-end="2733">🚫 Prevent Abuse With Rate Limiting</h2><p data-start="2735" data-end="2828">Users may abuse file endpoints with automated tools. Protect your endpoints using middleware:</p><ul data-start="2830" data-end="2974"><li><p data-start="2832" data-end="2872">Add request rate limiting per IP or user</p></li><li><p data-start="2875" data-end="2926">Detect patterns of abuse like rapid repeated access</p></li><li><p data-start="2929" data-end="2974">Combine with captchas for anonymous downloads</p></li></ul><hr data-start="2976" data-end="2979"><h2 data-start="2981" data-end="3026">🧼 Clean Up and Revoke Temporary Downloads</h2><p data-start="3028" data-end="3202">If you generate files on the fly or provide limited-time access, delete files after download or expire download tokens. You can use GUID-based URLs and remove them after use.</p><p data-start="3204" data-end="3212">Example:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>/secure-download/4b81f9e2-1234-4d8b-a5fc-abc123456def&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>This approach is common for password-protected downloads or one-time exports.</p><hr data-start="3362" data-end="3365"><h2 data-start="3367" data-end="3382">✅ Conclusion</h2><p data-start="3384" data-end="3677">Securing file downloads in ASP.NET goes beyond reading a file and returning it. You must authenticate users, validate input, apply proper headers and track access to prevent abuse and leakage. With these patterns in place you can safely provide download functionality in your web applications.</p>
+</div></div>
             </div>
         </div>
-    </article>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="article-navigation">
+    <ul class="flex justify-between">
+        <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/implementing-resumable-downloads-and-throttling-in-asp-net" title="Previous Article">
+                    <div class="flex items-center justify-center md:justify-start">
+                        &lt; &nbsp;
+                        <p class="font-primary">
+                            Previous Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black">
+                        Implementing Resumable Downloads and Throttling in ASP.NET
+                    </h5>
+                </a>
+        </li>
+            <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/handling-chunked-and-resumable-file-uploads-in-asp-net" title="Next Article">
+                    <div class="flex items-center flex-row-reverse md:flex-row justify-center md:justify-end">
+                        &nbsp; &gt;
+                        <p class="font-primary">
+                            Next Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black text-right">
+                        Handling Chunked and Resumable File Uploads in ASP.NET
+                    </h5>
+                </a>
+            </li>
+    </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</article>
 
     
 <footer>
