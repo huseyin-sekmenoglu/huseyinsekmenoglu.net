@@ -34,6 +34,7 @@
 /blog/windows-10-ile-dosya-paylasimi-nasil-yapilir/ /articles/how-to-share-files-on-windows/ 301
 /blog/windows-ta-lokal-ssl-sertifikasi-nasil-olusturulur /articles/how-to-create-a-local-ssl-certificate-on-windows/ 301
 /blog/wordpress-neden-sinir-bozucu /articles/why-wordpress-can-be-so-frustrating/ 301
+/blog/yazilimci-haklari-evrensel-bildirgesi /articles/the-universal-declaration-of-developer-rights/ 301
 /blog/yazilimci-neden-fazla-mesai-yapar /articles/why-developers-end-up-working-overtime/ 301
 /blog/yazilimci-neden-fazla-mesai-yapar/ /articles/why-developers-end-up-working-overtime/ 301
 /etiket/apple /articles/ 301
@@ -91,7 +92,7 @@
 /etiket/oyun /articles/ 301
 /etiket/oyun/ /articles/ 301
 /etiket/paylas /articles/ 301
-/etiket/paylas /articles/ 301
+/etiket/paylas/ /articles/ 301
 /etiket/performans /articles/ 301
 /etiket/programlama /backend/ 301
 /etiket/programlama/ /backend/ 301
@@ -102,6 +103,8 @@
 /etiket/resim/ /articles/ 301
 /etiket/server /backend/ 301
 /etiket/server/ /backend/ 301
+/etiket/sql-server/ /backend/ 301
+/etiket/sql-server /backend/ 301
 /etiket/ssl /security/ 301
 /etiket/tanitim/ /articles/ 301
 /etiket/type /articles/ 301
@@ -111,6 +114,7 @@
 /etiket/video /articles/ 301
 /etiket/visual-studio /backend/ 301
 /etiket/vps /security/ 301
+/etiket/vps/ /security/ 301
 /etiket/web-config /backend/ 301
 /etiket/web-config/ /backend/ 301
 /etiket/windows /articles/ 301
@@ -138,3 +142,4 @@
 /kategori/genel/guvenlik /security/ 301
 /kategori/genel/windows /articles/ 301
 /tag/programlama /articles/ 301
+/2013/server-2008-iis7de-ayrintili-hata-bilgisi-gostermek-500-internal-server-error.html /articles/ 301
