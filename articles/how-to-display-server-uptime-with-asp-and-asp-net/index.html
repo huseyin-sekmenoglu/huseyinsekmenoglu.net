@@ -156,7 +156,12 @@ by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;June 02
 
 <div class="richtext ">
     <p>When the ASP page loads, it automatically calls <code>GetUptime()</code> which sends an AJAX request to <code>uptime.aspx</code>. The response is then displayed in the <code>result</code> container. This is a lightweight and interactive way to show real-time server uptime.</p><hr data-start="3515" data-end="3518"><h3 data-start="3520" data-end="3534">🧠 Summary</h3><ul data-start="3536" data-end="3825"><li><p data-start="3538" data-end="3602">The old method relies on a startup log file to calculate uptime.</p></li><li><p data-start="3605" data-end="3686">The improved method uses <code>System.Diagnostics.PerformanceCounter</code> in an ASPX file.</p></li><li><p data-start="3689" data-end="3753">You can use AJAX in classic ASP to fetch and display the uptime.</p></li><li><p data-start="3756" data-end="3825">This method works well even if your site is a mix of ASP and ASP.NET.</p></li></ul><hr data-start="3827" data-end="3830"><h3 data-start="3832" data-end="3842">✅ Tips</h3><ul data-start="3844" data-end="4085"><li><p data-start="3846" data-end="3922">Ensure <code>uptime.aspx</code> is deployed to a location accessible by your ASP pages.</p></li><li><p data-start="3925" data-end="3997">AJAX is a better choice than iframes due to its flexibility and control.</p></li><li><p data-start="4000" data-end="4085">This technique avoids the need for file I/O or additional programs at system startup.</p></li></ul><p></p>
-</div></div>
+</div>
+<div class="image ">
+    <img src="https://huseyinsekmenoglu.net/media/eqanqkfn/server-uptime.png" alt="" class="img-fluid">
+</div>
+
+</div>
             </div>
         </div>
         <div class="row">
