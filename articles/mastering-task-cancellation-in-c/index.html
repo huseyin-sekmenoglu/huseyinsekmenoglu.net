@@ -11,14 +11,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>System Design | Tech Journey</title>
+<title>Mastering Task Cancellation in C# | Tech Journey</title>
 <meta name="Description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
-<link rel="canonical" href="https://huseyinsekmenoglu.net/categories/system-design/" />
+<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/mastering-task-cancellation-in-c/" />
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huseyinsekmenoglu.net/categories/system-design/" />
+<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/mastering-task-cancellation-in-c/" />
 <meta property="og:title" content="" />
 <meta property="og:description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
@@ -105,61 +105,198 @@
     </div>
 </nav>
 
-    
-<header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/iunfj0vc/system-design.jpg?width=1903&amp;height=628&amp;v=1dbf58ac6aba76e')">
+    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/5erf5jzq/backend-c-sharp.png?width=1903&amp;height=628&amp;v=1dbf58a2771d9bd')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="site-heading">
-                    <h1>System Design</h1>
+                <div class="post-heading">
+                    <h1>Mastering Task Cancellation in C#</h1>
 
+                            <h2 class="subheading mb-4">Graceful Cancellation Patterns for Responsive and Reliable Applications</h2>
+                        <span class="meta">
+                            Posted
+by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;December 18, 2018
+                        </span>
+                            <span class="mt-4 d-block"></span>
+                                <a href="https://huseyinsekmenoglu.net/categories/backend-development/" title="Backend Development" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Backend Development
+                                </a>
+                                <a href="https://huseyinsekmenoglu.net/categories/performance-optimization/" title="Performance &amp; Optimization" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Performance &amp; Optimization
+                                </a>
+                                <a href="https://huseyinsekmenoglu.net/categories/system-design/" title="System Design" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    System Design
+                                </a>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-
 <article>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-                <div class="row clearfix">
-                    <div class="col-md-12 column">
-                            <div class="post-preview">
-                                <a href="https://huseyinsekmenoglu.net/articles/mastering-task-cancellation-in-c/">
-                                    <h2 class="post-title">
-                                        Mastering Task Cancellation in C#
-                                    </h2>
-                                        <h3 class="post-subtitle">Graceful Cancellation Patterns for Responsive and Reliable Applications</h3>
-                                </a>
-                                <p class="post-meta">
-                                    Posted
-                                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                                    on December 18, 2018
-                                </p>
-                            </div>
-                            <hr>
-                            <div class="post-preview">
-                                <a href="https://huseyinsekmenoglu.net/articles/protocols-for-administrative-access-to-network-devices/">
-                                    <h2 class="post-title">
-                                        Protocols for Administrative Access to Network Devices
-                                    </h2>
-                                        <h3 class="post-subtitle">Understanding the essential protocols for managing all types of network environments</h3>
-                                </a>
-                                <p class="post-meta">
-                                    Posted
-                                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                                    on February 16, 2010
-                                </p>
-                            </div>
-                            <hr>
+                <div class="umb-block-list">
 
-                        
-<nav aria-label="Pagination controls">
-</nav>
+
+<div class="richtext ">
+    <h2 data-start="408" data-end="426">📌 Introduction</h2><p data-start="428" data-end="699">Cancellation is a critical concept in modern task-based programming. Whether you're building responsive user interfaces or managing long-running background operations, enabling cancellation allows your application to be more robust, resource-conscious and user-friendly.</p><p data-start="701" data-end="970">In this article, we’ll explore how to implement cooperative cancellation in C# using the <code>CancellationToken</code> and <code>CancellationTokenSource</code> classes, demonstrate real-world examples and highlight best practices to avoid leaving your application in an inconsistent state.</p><hr data-start="972" data-end="975"><h2 data-start="977" data-end="1007">🚦 Why Cancellation Matters</h2><p data-start="1009" data-end="1065">Task cancellation is useful in several common scenarios:</p><ul data-start="1067" data-end="1227"><li><p data-start="1069" data-end="1122">Gracefully stopping a task that is no longer needed</p></li><li><p data-start="1125" data-end="1166">Releasing critical or limited resources</p></li><li><p data-start="1169" data-end="1227">Enhancing application responsiveness and user experience</p></li></ul><p data-start="1229" data-end="1441">Rather than forcibly terminating a task, C# promotes a <strong data-start="1284" data-end="1318">cooperative cancellation model</strong>. This ensures both the task and the calling code can coordinate the cancellation logic, maintaining application integrity.</p><hr data-start="1443" data-end="1446"><h2 data-start="1448" data-end="1492">🧰 The Core Cancellation Components in C#</h2><p data-start="1494" data-end="1537">Two key components drive task cancellation:</p><ul data-start="1539" data-end="1727"><li><p data-start="1541" data-end="1638"><code>CancellationTokenSource</code>: Signals a cancellation request and produces a <code>CancellationToken</code>.</p></li><li><p data-start="1641" data-end="1727"><code>CancellationToken</code>: Passed to the task so it can check for cancellation requests.</p></li></ul><p data-start="1729" data-end="1737">Example:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>var tokenSource = new CancellationTokenSource();&#xA;var token = tokenSource.Token;&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>To link this token with a task:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>var printTask = Task.Run(() =&gt; {&#xA;    // Your task logic here&#xA;}, token);&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <hr data-start="2118" data-end="2121"><h2 data-start="2123" data-end="2156">👤 User-Initiated Cancellation</h2><h3 data-start="2158" data-end="2204">🧪 Example 1: Cooperative Exit with Return</h3><p data-start="2206" data-end="2307">In this example, we create a task that prints numbers from 0 to 99 and can be canceled by user input:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>var tokenSource = new CancellationTokenSource();&#xA;var token = tokenSource.Token;&#xA;&#xA;var printTask = Task.Run(() =&gt; {&#xA;    for (int i = 0; i &lt; 100; i&#x2B;&#x2B;) {&#xA;        if (token.IsCancellationRequested) {&#xA;            Console.WriteLine(&quot;Cancelling the print activity.&quot;);&#xA;            return;&#xA;        }&#xA;        Console.WriteLine($&quot;{i}&quot;);&#xA;        Thread.Sleep(500);&#xA;    }&#xA;}, token);&#xA;&#xA;Console.WriteLine(&quot;Enter c to cancel the task.&quot;);&#xA;if (Console.ReadKey().KeyChar == &#x27;c&#x27;) {&#xA;    Console.WriteLine(&quot;\nRaising the cancellation request.&quot;);&#xA;    tokenSource.Cancel();&#xA;}&#xA;&#xA;printTask.Wait();&#xA;Console.WriteLine($&quot;The final status of printTask is: {printTask.Status}&quot;);&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <h3 data-start="2969" data-end="2981">✅ Output</h3><p></p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>0&#xA;1&#xA;2&#xA;c&#xA;Raising the cancellation request.&#xA;Cancelling the print activity.&#xA;The final status of printTask is: RanToCompletion&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>Even though the task was canceled, the final status is <code>RanToCompletion</code> because the task ended via return, not via exception.</p><hr data-start="3243" data-end="3246"><h2 data-start="3248" data-end="3295">⚠️ Alternative: Exception-Based Cancellation</h2><h3 data-start="3297" data-end="3349">🧪 Example 2: Using <code>OperationCanceledException</code></h3><p data-start="3351" data-end="3389">To explicitly mark a task as canceled:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>if (token.IsCancellationRequested) {&#xA;    Console.WriteLine(&quot;Cancelling the print activity.&quot;);&#xA;    throw new OperationCanceledException(token);&#xA;}&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <h3 data-start="3551" data-end="3563">✅ Output</h3><p></p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>Cancelling the print activity.&#xA;Caught: TaskCanceledException, Message: A task was canceled.&#xA;The final status of printTask is: Canceled&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>This approach is preferred if you want the task status to be <code>Canceled</code>.</p><hr data-start="3783" data-end="3786"><h2 data-start="3788" data-end="3814">⏱️ Timeout Cancellation</h2><p data-start="3816" data-end="3879">Instead of waiting indefinitely, you can schedule cancellation:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>tokenSource.CancelAfter(2000);&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>This triggers a cancellation request after 2000 milliseconds, unless the user cancels earlier. You can combine both approaches.</p><hr data-start="4056" data-end="4059"><h2 data-start="4061" data-end="4098">🛰️ Monitoring Cancellation Events</h2><p data-start="4100" data-end="4167">C# offers several mechanisms to monitor when a cancellation occurs:</p><h3 data-start="4169" data-end="4192">🔔 Using <code>Register</code></h3><p></p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>token.Register(() =&gt; {&#xA;    Console.WriteLine(&quot;Cancelling the print activity. [Using event subscription]&quot;);&#xA;});&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <h3 data-start="4320" data-end="4353">🧱 Using <code>WaitHandle.WaitOne</code></h3><p></p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>Task.Run(() =&gt; {&#xA;    token.WaitHandle.WaitOne();&#xA;    Console.WriteLine(&quot;Cancelling the print activity. [Using WaitHandle]&quot;);&#xA;});&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>Both methods allow you to observe and react when the cancellation is requested.</p><hr data-start="4580" data-end="4583"><h2 data-start="4585" data-end="4626">🧪 Demonstration: Monitoring in Action</h2><p></p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>var tokenSource = new CancellationTokenSource();&#xA;var token = tokenSource.Token;&#xA;&#xA;token.Register(() =&gt; {&#xA;    Console.WriteLine(&quot;Cancelling the print activity. [Using event subscription]&quot;);&#xA;});&#xA;&#xA;var printTask = Task.Run(() =&gt; {&#xA;    for (int i = 0; i &lt; 100; i&#x2B;&#x2B;) {&#xA;        token.ThrowIfCancellationRequested();&#xA;        Console.WriteLine($&quot;{i}&quot;);&#xA;        Thread.Sleep(500);&#xA;    }&#xA;}, token);&#xA;&#xA;Task.Run(() =&gt; {&#xA;    token.WaitHandle.WaitOne();&#xA;    Console.WriteLine(&quot;Cancelling the print activity. [Using WaitHandle]&quot;);&#xA;});&#xA;&#xA;Console.WriteLine(&quot;Enter c to cancel the task.&quot;);&#xA;if (Console.ReadKey().KeyChar == &#x27;c&#x27;) {&#xA;    Console.WriteLine(&quot;\nTask cancellation requested.&quot;);&#xA;    tokenSource.Cancel();&#xA;}&#xA;&#xA;while (!printTask.IsCompleted) { }&#xA;Console.WriteLine($&quot;The final status of printTask is: {printTask.Status}&quot;);&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <hr data-start="5448" data-end="5451"><h2 data-start="5453" data-end="5487">🧩 Multiple Cancellation Tokens</h2><p data-start="5489" data-end="5583">Sometimes, multiple conditions may trigger cancellation. In that case, use a <strong data-start="5566" data-end="5582">linked token</strong>.</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>var normalCancellation = new CancellationTokenSource();&#xA;var unexpectedCancellation = new CancellationTokenSource();&#xA;&#xA;var compositeToken = CancellationTokenSource.CreateLinkedTokenSource(&#xA;    normalCancellation.Token,&#xA;    unexpectedCancellation.Token&#xA;);&#xA;&#xA;var printTask = Task.Run(() =&gt; {&#xA;    for (int i = 0; i &lt; 100; i&#x2B;&#x2B;) {&#xA;        compositeToken.Token.ThrowIfCancellationRequested();&#xA;        Console.WriteLine($&quot;{i}&quot;);&#xA;        Thread.Sleep(500);&#xA;    }&#xA;}, compositeToken.Token);&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>You can cancel from any source:</p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>normalCancellation.Cancel(); // User input  &#xA;unexpectedCancellation.Cancel(); // Emergency trigger&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <hr data-start="6225" data-end="6228"><h2 data-start="6230" data-end="6243">🧾 Summary</h2><p data-start="6245" data-end="6350">Task cancellation in C# enables cooperative control over long-running operations, allowing developers to:</p><ul data-start="6352" data-end="6566"><li><p data-start="6354" data-end="6398">Gracefully stop tasks via user interaction</p></li><li><p data-start="6401" data-end="6439">Automate cancellation using timeouts</p></li><li><p data-start="6442" data-end="6502">Monitor and respond to cancellation via event registration</p></li><li><p data-start="6505" data-end="6566">Combine multiple cancellation sources for complex scenarios</p></li></ul><p data-start="6568" data-end="6770">By designing your applications with proper cancellation handling, you ensure responsiveness, reliability and clean resource management. All essential traits of a modern, professional .NET application.</p>
+</div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="article-navigation">
+    <ul class="flex justify-between">
+        <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/dependency-inversion-principle-decouple-to-gain-control/" title="Previous Article">
+                    <div class="flex items-center justify-center md:justify-start">
+                        &lt; &nbsp;
+                        <p class="font-primary">
+                            Previous Article
+                        </p>
                     </div>
-                </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black">
+                        Dependency Inversion Principle: Decouple to Gain Control
+                    </h5>
+                </a>
+        </li>
+            <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/understanding-structs-in-c/" title="Next Article">
+                    <div class="flex items-center flex-row-reverse md:flex-row justify-center md:justify-end">
+                        &nbsp; &gt;
+                        <p class="font-primary">
+                            Next Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black text-right">
+                        Understanding Structs in C#
+                    </h5>
+                </a>
+            </li>
+    </ul>
+</div>
             </div>
         </div>
     </div>

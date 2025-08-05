@@ -11,14 +11,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>System Design | Tech Journey</title>
+<title>A Practical Guide to Unit, Integration and Acceptance Testing in C# | Tech Journey</title>
 <meta name="Description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta name="Name" content="" />
 <meta name="robots" content="FOLLOW,INDEX" />
-<link rel="canonical" href="https://huseyinsekmenoglu.net/categories/system-design/" />
+<link rel="canonical" href="https://huseyinsekmenoglu.net/articles/a-practical-guide-to-unit-integration-and-acceptance-testing-in-c/" />
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huseyinsekmenoglu.net/categories/system-design/" />
+<meta property="og:url" content="https://huseyinsekmenoglu.net/articles/a-practical-guide-to-unit-integration-and-acceptance-testing-in-c/" />
 <meta property="og:title" content="" />
 <meta property="og:description" content="Explore curated roadmaps, tutorials and projects for backend, frontend, mobile, DevOps, AI and more. Tech Journey helps developers learn smarter and grow faster." />
 <meta property="og:image" content="https://huseyinsekmenoglu.net/socialimage.png">
@@ -105,61 +105,88 @@
     </div>
 </nav>
 
-    
-<header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/iunfj0vc/system-design.jpg?width=1903&amp;height=628&amp;v=1dbf58ac6aba76e')">
+    <header class="masthead" style="background-image: url('https://huseyinsekmenoglu.net/media/sldjh4ye/software-testing.webp?width=1903&amp;height=628&amp;v=1dbf58ab9b13698')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="site-heading">
-                    <h1>System Design</h1>
+                <div class="post-heading">
+                    <h1>A Practical Guide to Unit, Integration and Acceptance Testing in C#</h1>
 
+                            <h2 class="subheading mb-4">Designing a Reliable Testing Strategy for Modern Applications</h2>
+                        <span class="meta">
+                            Posted
+by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu                            on&nbsp;August 07, 2021
+                        </span>
+                            <span class="mt-4 d-block"></span>
+                                <a href="https://huseyinsekmenoglu.net/categories/backend-development/" title="Backend Development" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Backend Development
+                                </a>
+                                <a href="https://huseyinsekmenoglu.net/categories/testing/" title="Testing" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Testing
+                                </a>
+                                <a href="https://huseyinsekmenoglu.net/categories/tooling-productivity/" title="Tooling &amp; Productivity" class="badge rounded-pill bg-light text-dark border-dark border-5">
+                                    Tooling &amp; Productivity
+                                </a>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-
 <article>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-                <div class="row clearfix">
-                    <div class="col-md-12 column">
-                            <div class="post-preview">
-                                <a href="https://huseyinsekmenoglu.net/articles/mastering-task-cancellation-in-c/">
-                                    <h2 class="post-title">
-                                        Mastering Task Cancellation in C#
-                                    </h2>
-                                        <h3 class="post-subtitle">Graceful Cancellation Patterns for Responsive and Reliable Applications</h3>
-                                </a>
-                                <p class="post-meta">
-                                    Posted
-                                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                                    on December 18, 2018
-                                </p>
-                            </div>
-                            <hr>
-                            <div class="post-preview">
-                                <a href="https://huseyinsekmenoglu.net/articles/protocols-for-administrative-access-to-network-devices/">
-                                    <h2 class="post-title">
-                                        Protocols for Administrative Access to Network Devices
-                                    </h2>
-                                        <h3 class="post-subtitle">Understanding the essential protocols for managing all types of network environments</h3>
-                                </a>
-                                <p class="post-meta">
-                                    Posted
-                                    by&nbsp;H&#xFC;seyin Sekmeno&#x11F;lu
-                                    on February 16, 2010
-                                </p>
-                            </div>
-                            <hr>
+                <div class="umb-block-list">
 
-                        
-<nav aria-label="Pagination controls">
-</nav>
+
+<div class="richtext ">
+    <h2 data-start="353" data-end="400">🎯 Why Testing Should Not Be an Afterthought</h2><p data-start="402" data-end="506">Postponing testing until the majority of the application is fully implemented introduces multiple risks:</p><ul data-start="508" data-end="906"><li><p data-start="510" data-end="624">Incorrectly designed classes might influence the implementation of other components, making late fixes expensive</p></li><li><p data-start="627" data-end="752">Testing multiple modules together increases the complexity exponentially due to the combination of possible execution paths</p></li><li><p data-start="755" data-end="828">Identifying bugs becomes harder when many modules are tested as a group</p></li><li><p data-start="831" data-end="906">Any change in a shared module forces you to rewrite all its related tests</p></li></ul><p data-start="908" data-end="1127">Testing each module separately is far more efficient. However, unit testing alone is not sufficient because some issues emerge only when modules interact. This is why a structured multi-stage testing strategy is needed.</p><hr data-start="1129" data-end="1132"><h2 data-start="1134" data-end="1176">🧱 The Three Layers of Software Testing</h2><h3 data-start="1178" data-end="1194">✅ Unit Tests</h3><ul data-start="1196" data-end="1403"><li><p data-start="1198" data-end="1240">Focused on individual methods or classes</p></li><li><p data-start="1243" data-end="1303">Free from dependencies like databases or external services</p></li><li><p data-start="1306" data-end="1353">Aim to cover <strong data-start="1319" data-end="1351">all possible execution paths</strong></p></li><li><p data-start="1356" data-end="1403">Fast, deterministic and suitable for automation</p></li></ul><p data-start="1405" data-end="1506">Because each module has a limited number of paths, unit testing can and should aim for full coverage.</p><h3 data-start="1508" data-end="1532">🔗 Integration Tests</h3><ul data-start="1534" data-end="1769"><li><p data-start="1536" data-end="1572">Executed after all unit tests pass</p></li><li><p data-start="1575" data-end="1618">Validate the interactions between modules</p></li><li><p data-start="1621" data-end="1716">Do not need to be exhaustive, since unit tests already verify correctness at the module level</p></li><li><p data-start="1719" data-end="1769">Focus on common and edge-case interaction patterns</p></li></ul><p data-start="1771" data-end="1868">For example, if a module interaction pattern expects an array input, tests should be written for:</p><ul data-start="1870" data-end="1948"><li><p data-start="1872" data-end="1889">A typical array</p></li><li><p data-start="1892" data-end="1908">A <code>null</code> array</p></li><li><p data-start="1911" data-end="1927">An empty array</p></li><li><p data-start="1930" data-end="1948">A very large array</p></li></ul><p data-start="1950" data-end="2030">This ensures compatibility between module behavior and actual integration usage.</p><h3 data-start="2032" data-end="2055">🎯 Acceptance Tests</h3><ul data-start="2057" data-end="2264"><li><p data-start="2059" data-end="2113">Executed at the end of each sprint or before release</p></li><li><p data-start="2116" data-end="2172">Verify both functional and non-functional requirements</p></li><li><p data-start="2175" data-end="2264">Include functional tests (what the app does) and performance tests (how well it performs)</p></li></ul><p data-start="2266" data-end="2405">Acceptance tests validate the final product against business expectations and help ensure the UI and performance meet real-world standards.</p><hr data-start="2407" data-end="2410"><h2 data-start="2412" data-end="2455">🤖 Automating Unit and Integration Tests</h2><p data-start="2457" data-end="2524">Automation is essential in modern CI/CD workflows. Automated tests:</p><ul data-start="2526" data-end="2702"><li><p data-start="2528" data-end="2574">Run quickly and repeatedly after each change</p></li><li><p data-start="2577" data-end="2608">Reduce the risk of regression</p></li><li><p data-start="2611" data-end="2644">Allow faster and safer releases</p></li><li><p data-start="2647" data-end="2702">Provide documentation and confidence during refactoring</p></li></ul><p data-start="2704" data-end="2828">As bugs are discovered, new tests are added to cover them. Over time, this builds a more robust and self-defending codebase.</p><hr data-start="2830" data-end="2833"><h2 data-start="2835" data-end="2887">🧪 Writing Unit and Integration Tests in Practice</h2><p data-start="2889" data-end="3058">Most platforms offer tooling to simplify testing. In .NET, you typically use frameworks like MSTest, xUnit or NUnit, supported by Visual Studio’s integrated test runner.</p><h3 data-start="3060" data-end="3086">🧱 Structure of a Test</h3><p data-start="3088" data-end="3125">Each test includes three main stages:</p><ol data-start="3127" data-end="3435"><li><p data-start="3130" data-end="3242"><strong data-start="3130" data-end="3150">Test Preparation</strong>:<br>Set up the shared environment such as fake services, mock dependencies or test data</p></li><li><p data-start="3246" data-end="3362"><strong data-start="3246" data-end="3264">Test Execution</strong>:<br>Call the method under test and compare results using assertions like <code>Assert.Equal(x, y)</code></p></li><li><p data-start="3366" data-end="3435"><strong data-start="3366" data-end="3379">Tear-Down</strong>:<br>Clean up the environment so tests remain isolated</p></li></ol><h3 data-start="3437" data-end="3455">🧪 Using Mocks</h3><ul data-start="3457" data-end="3775"><li><p data-start="3459" data-end="3505"><strong data-start="3459" data-end="3473">Unit tests</strong> avoid using real dependencies</p></li><li><p data-start="3508" data-end="3567">Classes or interfaces are mocked to simulate interactions</p></li><li><p data-start="3570" data-end="3653">Mock libraries (like Moq in .NET) help simulate method calls and verify behaviors</p></li><li><p data-start="3656" data-end="3670">For example:</p></li></ul><p></p>
+</div>
+
+<div class="row clearfix ">
+    <div class="col-md-12 column">
+        <pre><code>var mock = new Mock&lt;IMyService&gt;();&#xA;mock.Setup(m =&gt; m.GetData()).Returns(fakeData);&#xA;</code></pre>
+    </div>
+</div>
+
+<div class="richtext ">
+    <p>Mocks allow testing class A independently of class B even if A depends on B.</p><p data-start="3855" data-end="3879">To maximize testability:</p><ul data-start="3881" data-end="4017"><li><p data-start="3883" data-end="3919">Inject dependencies via interfaces</p></li><li><p data-start="3922" data-end="3970">Avoid static global instances in public fields</p></li><li><p data-start="3973" data-end="4017">Use dependency injection to isolate behavior</p></li></ul><hr data-start="4019" data-end="4022"><h2 data-start="4024" data-end="4076">🧪 Acceptance Testing: Functional and Performance</h2><h3 data-start="4078" data-end="4103">✔️ Functional Testing</h3><ul data-start="4105" data-end="4369"><li><p data-start="4107" data-end="4165">Verifies that the software does what stakeholders expect</p></li><li><p data-start="4168" data-end="4241">Usually bypasses the UI by injecting inputs directly into backend logic</p></li><li><p data-start="4244" data-end="4369">In ASP.NET Core, use tools like <code>Microsoft.AspNetCore.Mvc.Testing</code> with <code>AngleSharp</code> for efficient functional test automation</p></li></ul><p data-start="4371" data-end="4476">These tests are sometimes called <strong data-start="4404" data-end="4426">subcutaneous tests</strong>, as they operate just beneath the user interface.</p><h3 data-start="4478" data-end="4509">🧪 UI Testing: When and Why</h3><p data-start="4511" data-end="4546">UI tests are expensive and fragile:</p><ul data-start="4548" data-end="4641"><li><p data-start="4550" data-end="4573">Difficult to automate</p></li><li><p data-start="4576" data-end="4612">Break easily with small UI changes</p></li><li><p data-start="4615" data-end="4641">Time-consuming to maintain</p></li></ul><p data-start="4643" data-end="4782">Use tools like <strong data-start="4658" data-end="4674">Selenium IDE</strong> during manual tests to record repeatable test sessions but rely on automation only for stable UI sections.</p><hr data-start="4784" data-end="4787"><h3 data-start="4789" data-end="4815">🚀 Performance Testing</h3><p data-start="4817" data-end="4908">Performance tests simulate load on a staging environment that mimics production. They help:</p><ul data-start="4910" data-end="5049"><li><p data-start="4912" data-end="4963">Verify response times under normal and high loads</p></li><li><p data-start="4966" data-end="4988">Discover bottlenecks</p></li><li><p data-start="4991" data-end="5049">Decide between optimizing code or upgrading infrastructure</p></li></ul><p data-start="5051" data-end="5154">Fake loads should reflect real usage patterns, ideally extracted from production logs. You can monitor:</p><ul data-start="5156" data-end="5235"><li><p data-start="5158" data-end="5178">Memory consumption</p></li><li><p data-start="5181" data-end="5197">I/O throughput</p></li><li><p data-start="5200" data-end="5235">Execution times of critical methods</p></li></ul><p data-start="5237" data-end="5323">These insights help you scale wisely and prepare the application for real-world usage.</p><hr data-start="5325" data-end="5328"><h2 data-start="5330" data-end="5343">🧾 Summary</h2><p data-start="5345" data-end="5385">A solid testing strategy in C# involves:</p><ul data-start="5387" data-end="5605"><li><p data-start="5389" data-end="5461">Writing complete <strong data-start="5406" data-end="5420">unit tests</strong> that isolate and verify internal logic</p></li><li><p data-start="5464" data-end="5532">Adding <strong data-start="5471" data-end="5492">integration tests</strong> that confirm inter-module cooperation</p></li><li><p data-start="5535" data-end="5605">Running <strong data-start="5543" data-end="5563">acceptance tests</strong> that verify functionality and performance</p></li></ul><p data-start="5607" data-end="5786">When done right, testing adds confidence, reduces bugs and enables agility during development. Use automation wisely to support continuous improvement and release with confidence.</p>
+</div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="article-navigation">
+    <ul class="flex justify-between">
+        <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/stay-in-sync-with-the-observer-pattern/" title="Previous Article">
+                    <div class="flex items-center justify-center md:justify-start">
+                        &lt; &nbsp;
+                        <p class="font-primary">
+                            Previous Article
+                        </p>
                     </div>
-                </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black">
+                        Stay in Sync with the Observer Pattern
+                    </h5>
+                </a>
+        </li>
+            <li class="article-navigation-item">
+                <a class="article-navigation-item-link" href="https://huseyinsekmenoglu.net/articles/calculating-loan-amount-from-installment-and-total-repayment/" title="Next Article">
+                    <div class="flex items-center flex-row-reverse md:flex-row justify-center md:justify-end">
+                        &nbsp; &gt;
+                        <p class="font-primary">
+                            Next Article
+                        </p>
+                    </div>
+                    <h5 class="hidden md:block text-lg text-primary mb-1 font-black text-right">
+                        Calculating Loan Amount from Installment and Total Repayment
+                    </h5>
+                </a>
+            </li>
+    </ul>
+</div>
             </div>
         </div>
     </div>
