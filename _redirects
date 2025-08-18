@@ -1,3 +1,7 @@
+/2010/virtual-villagers-ve-bendeki-etkileri.html /articles/virtual-villagers-and-its-impact-on-me/ 301
+/2013/flowplayer-oynaticisi-entegre-etme-ve-video-oynatma.html /articles/ 301
+/2013/server-2008-iis7de-ayrintili-hata-bilgisi-gostermek-500-internal-server-error.html /articles/how-to-show-detailed-error-messages-on-server-2008-iis7-fixing-500-internal-server-error/ 301
+/2014/flowplayer-oynaticisini-html5-olarak-entegre-etme.html /articles/ 301
 /articles/code-style-essentials /articles/code-style-essentials-write-cleaner-smarter-and-maintainable-code-every-day/ 301
 /blog/asp-net-guvenlik-ayarlari /articles/best-practices-for-building-secure-and-maintainable-web-apis-in-asp-net-core/ 301
 /blog/asp-net-guvenlik-ayarlari/ /articles/best-practices-for-building-secure-and-maintainable-web-apis-in-asp-net-core/ 301
@@ -31,8 +35,10 @@
 /blog/toplu-dosya-ismi-nasil-degistirilir /articles/how-to-batch-rename-files-easily/ 301
 /blog/value-type-vs-reference-type /articles/value-type-vs-reference-type/ 301
 /blog/value-type-vs-reference-type/ /articles/value-type-vs-reference-type/ 301
+/blog/windows-10-ile-dosya-paylasimi-nasil-yapilir /articles/how-to-share-files-on-windows/ 301
 /blog/windows-10-ile-dosya-paylasimi-nasil-yapilir/ /articles/how-to-share-files-on-windows/ 301
 /blog/windows-ta-lokal-ssl-sertifikasi-nasil-olusturulur /articles/how-to-create-a-local-ssl-certificate-on-windows/ 301
+/blog/windows-ta-lokal-ssl-sertifikasi-nasil-olusturulur/ /articles/how-to-create-a-local-ssl-certificate-on-windows/ 301
 /blog/wordpress-neden-sinir-bozucu /articles/why-wordpress-can-be-so-frustrating/ 301
 /blog/yazilimci-haklari-evrensel-bildirgesi /articles/the-universal-declaration-of-developer-rights/ 301
 /blog/yazilimci-neden-fazla-mesai-yapar /articles/why-developers-end-up-working-overtime/ 301
@@ -48,10 +54,10 @@
 /etiket/blog /articles/ 301
 /etiket/blog/ /articles/ 301
 /etiket/blog/page/2 /articles/ 301
-/etiket/c-sharp /backend/ 301
-/etiket/c-sharp/ /backend/ 301
 /etiket/cloud /articles/ 301
 /etiket/cozum /articles/ 301
+/etiket/c-sharp /backend/ 301
+/etiket/c-sharp/ /backend/ 301
 /etiket/css /frontend/ 301
 /etiket/css/ /frontend/ 301
 /etiket/database /backend/ 301
@@ -66,6 +72,7 @@
 /etiket/error /articles/ 301
 /etiket/error/ /articles/ 301
 /etiket/format /articles/ 301
+/etiket/frontend /frontend/ 301
 /etiket/frontend/ /frontend/ 301
 /etiket/genel /articles/ 301
 /etiket/genel/ /articles/ 301
@@ -73,6 +80,7 @@
 /etiket/git/ /backend/ 301
 /etiket/google /articles/ 301
 /etiket/google/ /articles/ 301
+/etiket/guvenlik /articles/ 301
 /etiket/guvenlik/ /articles/ 301
 /etiket/hosting /articles/ 301
 /etiket/hosting/ /articles/ 301
@@ -103,9 +111,10 @@
 /etiket/resim/ /articles/ 301
 /etiket/server /backend/ 301
 /etiket/server/ /backend/ 301
-/etiket/sql-server/ /backend/ 301
 /etiket/sql-server /backend/ 301
+/etiket/sql-server/ /backend/ 301
 /etiket/ssl /security/ 301
+/etiket/tanitim /articles/ 301
 /etiket/tanitim/ /articles/ 301
 /etiket/type /articles/ 301
 /etiket/type/ /articles/ 301
@@ -141,5 +150,8 @@
 /kategori/genel/ /articles/ 301
 /kategori/genel/guvenlik /security/ 301
 /kategori/genel/windows /articles/ 301
+/tag/php /articles/ 301
 /tag/programlama /articles/ 301
-/2013/server-2008-iis7de-ayrintili-hata-bilgisi-gostermek-500-internal-server-error.html /articles/ 301
+/tag/teknoloji_2 /articles/ 301
+/umbraco-cms /umbraco/ 301
+/wp-content/uploads/isp-2.pdf /articles/ 301
