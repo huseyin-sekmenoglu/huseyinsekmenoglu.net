@@ -3,7 +3,7 @@ export async function onRequestPost(context) {
 
   try {
     const data = await request.json();
-    const { Name, Email, Company, Phone, Message } = data;
+    const { Name, Email, Message } = data;
 
     if (!Name || !Email || !Message) {
       return new Response("Missing fields", { status: 400 });
@@ -11,8 +11,8 @@ export async function onRequestPost(context) {
 
     // Insert into D1
     await env.DB.prepare(
-      "INSERT INTO contacts (name, email, company, phone, message, created_at) VALUES (?, ?, ?, ?, ?, datetime('now'))"
-    ).bind(Name, Email, Company, Phone, Message).run();
+      "INSERT INTO contacts (name, email, company, phone, message, created_at) VALUES (?, ?, '', '', ?, datetime('now'))"
+    ).bind(Name, Email, Message).run();
 
     return new Response("Saved", { status: 200 });
   } catch (err) {
