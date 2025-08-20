@@ -3,16 +3,16 @@ export async function onRequestPost(context) {
 
   try {
     const data = await request.json();
-    const { name, email, company, phone, message } = data;
+    const { Name, Email, Company, Phone, Message } = data;
 
-    if (!name || !email || !message) {
+    if (!Name || !Email || !Message) {
       return new Response("Missing fields", { status: 400 });
     }
 
     // Insert into D1
     await env.DB.prepare(
       "INSERT INTO contacts (name, email, company, phone, message, created_at) VALUES (?, ?, ?, ?, ?, datetime('now'))"
-    ).bind(name, email, company, phone, message).run();
+    ).bind(Name, Email, Company, Phone, Message).run();
 
     return new Response("Saved", { status: 200 });
   } catch (err) {
